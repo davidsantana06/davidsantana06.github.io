@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>David Santana</title>
+    <link rel="icon" href="./assets/favicon.ico" />
+    <link rel="stylesheet" href="./assets/vendor/bulma.min.css" />
+    <link rel="stylesheet" href="./assets/vendor/bulma-list.min.css" />
+    <link rel="stylesheet" href="./assets/vendor/animate.min.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <script defer src="./assets/vendor/alpine.min.js"></script>
+    <script defer src="./assets/vendor/fontawesome.min.js"></script>
+  </head>
+
+  <body>
+    <main
+      class="container is-fullheight is-flex is-flex-direction-column is-align-items-center is-justify-content-center py-6"
+    >
+      <figure
+        class="image is-128x128 mb-5"
+        x-data="{ currentAvatar: avatar.onMouseOut }"
+      >
+        <img
+          class="is-rounded has-shadow"
+          :src="currentAvatar.src"
+          :alt="currentAvatar.alt"
+          @mouseover="currentAvatar = avatar.onMouseOver"
+          @mouseout="currentAvatar = avatar.onMouseOut"
+        />
+      </figure>
+
+      <div class="has-text-centered mb-5" x-data="{ title, subtitle }">
+        <h1 class="title is-5 mb-1" x-text="title"></h1>
+        <h2 class="subtitle is-7 has-text-weight-medium" x-text="subtitle"></h2>
+      </div>
+
+      <div class="list">
+        <template x-for="platform in platforms" x-data="{ platforms, theme }">
+          <a
+            class="list-item box is-zoomable p-4"
+            :href="platform.href"
+            target="_blank"
+          >
+            <div class="list-item-title">
+              <i
+                :class="[platform.icon, 'fa-xl', 'fa-fw', 'mr-3']"
+                :style="{ color: platform.color[theme] }"
+              ></i>
+              <span
+                class="has-text-weight-medium"
+                x-text="platform.title"
+              ></span>
+            </div>
+          </a>
+        </template>
+      </div>
+    </main>
+
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>

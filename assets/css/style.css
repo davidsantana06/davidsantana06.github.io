@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --bulma-primary-h: 191deg;
+  --bulma-primary-s: 99%;
+  --bulma-primary-l: 48%;
+  --bulma-link-h: 191deg;
+  --bulma-link-s: 99%;
+  --bulma-link-l: 48%;
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 0.05em;
+}
+
+.is-fullheight {
+  min-height: 100svh;
+}
+
+.is-size-8 {
+  font-size: 0.7rem;
+}
+
+.is-zoomable {
+  transition: transform 0.15s ease !important;
+}
+
+.is-zoomable:hover {
+  transform: scale(1.1);
+}
+
+html[data-theme="dark"] .has-shadow {
+  box-shadow: 0 8px 32px rgba(255, 255, 255, 0.08),
+    0 4px 16px rgba(255, 255, 255, 0.06);
+}
+
+html[data-theme="light"] .has-shadow {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08), 0 4px 16px rgba(0, 0, 0, 0.06);
+}
