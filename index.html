@@ -38,22 +38,22 @@
       <div class="list" style="max-width: 640px">
         <template x-for="platform in platforms" x-data="{ platforms, theme }">
           <a
-            class="list-item box is-zoomable p-4"
+            class="list-item box is-zoomable px-5"
             :href="platform.href"
             target="_blank"
           >
-            <div class="is-flex is-align-items-center">
+            <div class="list-item-image">
               <i
-                :class="[platform.icon.class, 'fa-2xl', 'fa-fw', 'mr-4']"
+                :class="[platform.icon.class, 'fa-2xl', 'fa-fw']"
                 :style="{ color: platform.icon.color[theme] }"
               ></i>
-              <div class="is-flex is-flex-direction-column">
-                <span class="list-item-title" x-text="platform.name"></span>
-                <span
-                  class="is-size-7 has-text-weight-light"
-                  x-text="platform.description"
-                ></span>
-              </div>
+            </div>
+            <div class="list-item-content">
+              <div class="list-item-title" x-text="platform.title"></div>
+              <div
+                class="list-item-description is-size-7"
+                x-text="platform.description"
+              ></div>
             </div>
           </a>
         </template>

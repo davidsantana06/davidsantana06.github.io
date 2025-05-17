@@ -18,7 +18,7 @@ const careerPlatforms = [
       class: "fas fa-file-lines",
       color: { dark: "#4A81C7", light: "#154360" },
     },
-    name: "Currículo",
+    title: "Currículo",
     description:
       "Página com o resumo da minha trajetória profissional. " +
       "Se estiver pensando em me contratar, dê uma boa olhada " +
@@ -30,7 +30,7 @@ const careerPlatforms = [
       class: "fab fa-linkedin",
       color: { dark: "#4C8FD9", light: "#0077B5" },
     },
-    name: "LinkedIn",
+    title: "LinkedIn",
     description:
       "Perfil profissional com algumas atualizações do que andei " +
       "fazendo nos últimos anos. Também vale a visita, caso esteja " +
@@ -42,7 +42,7 @@ const careerPlatforms = [
       class: "fab fa-github",
       color: { dark: "#FFFFFF", light: "#181717" },
     },
-    name: "GitHub",
+    title: "GitHub",
     description:
       "Repositório de código com meus principais projetos e " +
       "contribuições. Se tiver dúvida se eu realmente sei programar " +
@@ -56,7 +56,7 @@ const gamePlatforms = [
       class: "fab fa-steam",
       color: { dark: "#5AAEFF", light: "#171A21" },
     },
-    name: "Steam",
+    title: "Steam",
     description:
       "Minha plataforma de jogos atual. Migrei pra cá fugindo dos " +
       "preços surreais dos consoles. E olha, não me arrependo.",
@@ -67,7 +67,7 @@ const gamePlatforms = [
       class: "fab fa-playstation",
       color: { dark: "#4E7FCC", light: "#003087" },
     },
-    name: "PlayStation",
+    title: "PlayStation",
     description:
       "Já fui fã da tal Sony. Hoje nem tanto, mas deixo o perfil aqui " +
       "porque tem umas platinas que valem respeito.",
@@ -80,7 +80,7 @@ const contentPlatforms = [
       class: "fab fa-youtube",
       color: { dark: "#FF4D4D", light: "#FF0000" },
     },
-    name: "YouTube",
+    title: "YouTube",
     description:
       "Canal antigo com vídeos variados. Dá pra ter uma noção das " +
       "minhas habilidades com edição de vídeo — ou pelo menos das " +
@@ -94,7 +94,7 @@ const donatePlatforms = [
       class: "fab fa-paypal",
       color: { dark: "#4E7FCC", light: "#003087" },
     },
-    name: "Doar via PayPal",
+    title: "Doar via PayPal",
     href: "https://www.paypal.com/donate/?hosted_button_id=2P9HPGUP7Z43S",
   },
   {
@@ -102,7 +102,7 @@ const donatePlatforms = [
       class: "fab fa-pix",
       color: { dark: "#3EC6BD", light: "#00BFA5" },
     },
-    name: "Doar via PIX",
+    title: "Doar via PIX",
     href: "https://tipa.ai/davidsantana06",
   },
 ];
