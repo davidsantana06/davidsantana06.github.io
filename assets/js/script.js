@@ -121,6 +121,7 @@ const setTheme = (theme) =>
   document.documentElement.setAttribute("data-theme", theme);
 
 const getHiddenPlatforms = (urlParams) => urlParams.getAll("hide");
+
 const urlParams = getUrlParams();
 
 const theme = getTheme(urlParams);
