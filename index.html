@@ -35,22 +35,25 @@
         <h2 class="subtitle is-7 has-text-weight-medium" x-text="subtitle"></h2>
       </div>
 
-      <div class="list">
+      <div class="list" style="max-width: 640px">
         <template x-for="platform in platforms" x-data="{ platforms, theme }">
           <a
             class="list-item box is-zoomable p-4"
             :href="platform.href"
             target="_blank"
           >
-            <div class="list-item-title">
+            <div class="is-flex is-align-items-center">
               <i
-                :class="[platform.icon, 'fa-xl', 'fa-fw', 'mr-3']"
-                :style="{ color: platform.color[theme] }"
+                :class="[platform.icon.class, 'fa-2xl', 'fa-fw', 'mr-4']"
+                :style="{ color: platform.icon.color[theme] }"
               ></i>
-              <span
-                class="has-text-weight-medium"
-                x-text="platform.title"
-              ></span>
+              <div class="is-flex is-flex-direction-column">
+                <span class="list-item-title" x-text="platform.name"></span>
+                <span
+                  class="is-size-7 has-text-weight-light"
+                  x-text="platform.description"
+                ></span>
+              </div>
             </div>
           </a>
         </template>
