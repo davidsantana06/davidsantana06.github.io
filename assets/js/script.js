@@ -16,7 +16,7 @@ const careerPlatforms = [
   {
     icon: {
       class: "fas fa-file-lines",
-      color: { dark: "#4A81C7", light: "#154360" },
+      color: { dark: "#6BB7FF", light: "#0E5CAD" },
     },
     title: "Currículo",
     description:
@@ -28,7 +28,7 @@ const careerPlatforms = [
   {
     icon: {
       class: "fab fa-linkedin",
-      color: { dark: "#4C8FD9", light: "#0077B5" },
+      color: { dark: "#0A66C2", light: "#0077B5" },
     },
     title: "LinkedIn",
     description:
@@ -40,7 +40,7 @@ const careerPlatforms = [
   {
     icon: {
       class: "fab fa-github",
-      color: { dark: "#FFFFFF", light: "#181717" },
+      color: { dark: "#F0F6FC", light: "#181717" },
     },
     title: "GitHub",
     description:
@@ -54,7 +54,7 @@ const gamePlatforms = [
   {
     icon: {
       class: "fab fa-steam",
-      color: { dark: "#5AAEFF", light: "#171A21" },
+      color: { dark: "#66C0F4", light: "#1B2838" },
     },
     title: "Steam",
     description:
@@ -65,7 +65,7 @@ const gamePlatforms = [
   {
     icon: {
       class: "fab fa-playstation",
-      color: { dark: "#4E7FCC", light: "#003087" },
+      color: { dark: "#0082F0", light: "#003087" },
     },
     title: "PlayStation",
     description:
@@ -92,7 +92,7 @@ const donatePlatforms = [
   {
     icon: {
       class: "fab fa-paypal",
-      color: { dark: "#4E7FCC", light: "#003087" },
+      color: { dark: "#009CDE", light: "#003087" },
     },
     title: "Doar via PayPal",
     href: "https://www.paypal.com/donate/?hosted_button_id=2P9HPGUP7Z43S",

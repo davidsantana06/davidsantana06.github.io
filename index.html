@@ -15,7 +15,7 @@
 
   <body>
     <main
-      class="container is-fullheight is-flex is-flex-direction-column is-align-items-center is-justify-content-center px-5 py-6"
+      class="container is-flex is-flex-direction-column is-align-items-center is-justify-content-center is-fullheight px-5 py-6"
     >
       <figure
         class="image is-128x128 mb-5"
@@ -42,7 +42,7 @@
             :href="platform.href"
             target="_blank"
           >
-            <div class="list-item-image">
+            <div class="list-item-image mr-5">
               <i
                 :class="[platform.icon.class, 'fa-2xl', 'fa-fw']"
                 :style="{ color: platform.icon.color[theme] }"
