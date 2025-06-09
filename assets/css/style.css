@@ -11,15 +11,11 @@
 
 * {
   font-family: "Poppins", sans-serif;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.01em;
 }
 
 .is-fullheight {
   min-height: 100svh;
-}
-
-.is-size-8 {
-  font-size: 0.7rem;
 }
 
 .is-zoomable {
@@ -27,7 +23,7 @@
 }
 
 .is-zoomable:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 html[data-theme="dark"] .has-shadow {

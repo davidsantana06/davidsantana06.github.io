@@ -8,7 +8,6 @@
     <link rel="icon" href="./assets/favicon.ico" />
     <link rel="stylesheet" href="./assets/vendor/bulma.min.css" />
     <link rel="stylesheet" href="./assets/vendor/bulma-list.min.css" />
-    <link rel="stylesheet" href="./assets/vendor/animate.min.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
     <script defer src="./assets/vendor/alpine.min.js"></script>
     <script defer src="./assets/vendor/fontawesome.min.js"></script>
@@ -16,7 +15,7 @@
 
   <body>
     <main
-      class="container is-fullheight is-flex is-flex-direction-column is-align-items-center is-justify-content-center py-6"
+      class="container is-flex is-flex-direction-column is-align-items-center is-justify-content-center is-fullheight px-5 py-6"
     >
       <figure
         class="image is-128x128 mb-5"
@@ -36,22 +35,26 @@
         <h2 class="subtitle is-7 has-text-weight-medium" x-text="subtitle"></h2>
       </div>
 
-      <div class="list">
-        <template x-for="platform in platforms" x-data="{ platforms, theme }">
+      <div class="list" style="max-width: 640px">
+        <template x-for="platform in platforms" x-data="{ blur, platforms, theme }">
           <a
-            class="list-item box is-zoomable p-4"
+            class="list-item box is-zoomable px-5"
             :href="platform.href"
             target="_blank"
+            @click="blur($el)"
           >
-            <div class="list-item-title">
+            <div class="list-item-image mr-5">
               <i
-                :class="[platform.icon, 'fa-xl', 'fa-fw', 'mr-3']"
-                :style="{ color: platform.color[theme] }"
+                :class="[platform.icon.class, 'fa-2xl', 'fa-fw']"
+                :style="{ color: platform.icon.color[theme] }"
               ></i>
-              <span
-                class="has-text-weight-medium"
-                x-text="platform.title"
-              ></span>
+            </div>
+            <div class="list-item-content">
+              <div class="list-item-title" x-text="platform.title"></div>
+              <div
+                class="list-item-description is-size-7"
+                x-text="platform.description"
+              ></div>
             </div>
           </a>
         </template>
