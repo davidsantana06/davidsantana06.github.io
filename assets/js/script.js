@@ -1,5 +1,7 @@
 const title = "David Santana";
-const subtitle = "Progamador, designer e tudo o que você puder imaginar";
+const subtitle =
+  "Progamador, designer, produtor de conteúdo " +
+  "e tudo o que você puder imaginar";
 
 const avatar = {
   onMouseOut: {
