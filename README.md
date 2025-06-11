@@ -19,14 +19,14 @@ A customização da página pode ser feita através de parâmetros na URL (_quer
 
 | Parâmetro      | Funcionalidade                    |
 | -------------- | --------------------------------- |
-| `theme=dark`   | Atribui o tema escuro             |
-| `theme=light`  | Atribui o tema claro              |
-| `hide=career`  | Oculta as plataformas de carreira |
-| `hide=game`    | Oculta as plataformas de jogos    |
-| `hide=content` | Oculta as plataformas de conteúdo |
-| `hide=donate`  | Oculta as plataformas de doação   |
+| `t=dark`       | Atribui o tema escuro (padrão)    |
+| `t=light`      | Atribui o tema claro              |
+| `h=career`  | Oculta as plataformas de carreira |
+| `h=game`    | Oculta as plataformas de jogos    |
+| `h=content` | Oculta as plataformas de conteúdo |
+| `h=donate`  | Oculta as plataformas de doação   |
 
-Por exemplo, ao acessar `https://davidsantana06.github.io?theme=light&hide=game&hide=content`, a página será exibida com o tema claro e sem as seções de jogos e de conteúdo.
+Por exemplo, ao acessar `https://davidsantana06.github.io?t=light&h=game&h=content`, a página será exibida com o tema claro e sem as seções de jogos e de conteúdo.
 
 ### ⚖️ Licença
 

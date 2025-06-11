@@ -114,7 +114,7 @@ const getUrlParams = () => {
 };
 
 const getTheme = (urlParams) => {
-  const theme = urlParams.get("theme");
+  const theme = urlParams.get("t");
   const isThemeValid = ["dark", "light"].includes(theme);
   return isThemeValid ? theme : "dark";
 };
@@ -122,7 +122,7 @@ const getTheme = (urlParams) => {
 const setTheme = (theme) =>
   document.documentElement.setAttribute("data-theme", theme);
 
-const getHiddenPlatforms = (urlParams) => urlParams.getAll("hide");
+const getHiddenPlatforms = (urlParams) => urlParams.getAll("h");
 
 const urlParams = getUrlParams();
 
