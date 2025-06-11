@@ -19,24 +19,33 @@
     >
       <figure
         class="image is-128x128 mb-5"
-        x-data="{ currentAvatar: avatar.onMouseOut }"
+        x-data="{ avatar: getAvatar().onMouseOut }"
       >
         <img
           class="is-rounded has-shadow"
-          :src="currentAvatar.src"
-          :alt="currentAvatar.alt"
-          @mouseover="currentAvatar = avatar.onMouseOver"
-          @mouseout="currentAvatar = avatar.onMouseOut"
+          :src="avatar.src"
+          :alt="avatar.alt"
+          @mouseover="avatar = getAvatar().onMouseOver"
+          @mouseout="avatar = getAvatar().onMouseOut"
         />
       </figure>
 
-      <div class="has-text-centered mb-5" x-data="{ title, subtitle }">
+      <div
+        class="has-text-centered mb-5"
+        x-data="{ title: getTitle(), subtitle: getSubtitle() }"
+      >
         <h1 class="title is-5 mb-1" x-text="title"></h1>
-        <h2 class="subtitle is-7 has-text-weight-medium px-6" x-text="subtitle"></h2>
+        <h2
+          class="subtitle is-7 has-text-weight-medium px-6"
+          x-text="subtitle"
+        ></h2>
       </div>
 
       <div class="list" style="max-width: 640px">
-        <template x-for="(platform, index) in platforms" x-data="{ blur, isEven, platforms, theme }">
+        <template
+          x-for="(platform, index) in platforms"
+          x-data="{ blur, isEven, platforms: getPlatforms(theme, hiddenPlatforms) }"
+        >
           <a
             class="list-item box is-zoomable px-5"
             :href="platform.href"
@@ -44,12 +53,14 @@
             @click="blur($el)"
           >
             <div class="list-item-image mr-5">
-              <i :class="[
-                platform.icon,
-                'fa-2xl',
-                'fa-fw',
-                isEven(index) ? 'has-text-primary' : 'has-text-link'
-              ]"></i>
+              <i
+                :class="[
+                  platform.icon,
+                  'fa-2xl',
+                  'fa-fw',
+                  isEven(index) ? 'has-text-primary' : 'has-text-link'
+                ]"
+              ></i>
             </div>
             <div class="list-item-content">
               <div class="list-item-title" x-text="platform.title"></div>
