@@ -36,7 +36,7 @@
       </div>
 
       <div class="list" style="max-width: 640px">
-        <template x-for="platform in platforms" x-data="{ blur, platforms, theme }">
+        <template x-for="(platform, index) in platforms" x-data="{ blur, isEven, platforms, theme }">
           <a
             class="list-item box is-zoomable px-5"
             :href="platform.href"
@@ -44,10 +44,12 @@
             @click="blur($el)"
           >
             <div class="list-item-image mr-5">
-              <i
-                :class="[platform.icon.class, 'fa-2xl', 'fa-fw']"
-                :style="{ color: platform.icon.color[theme] }"
-              ></i>
+              <i :class="[
+                platform.icon,
+                'fa-2xl',
+                'fa-fw',
+                isEven(index) ? 'has-text-primary' : 'has-text-link'
+              ]"></i>
             </div>
             <div class="list-item-content">
               <div class="list-item-title" x-text="platform.title"></div>

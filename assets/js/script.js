@@ -16,10 +16,7 @@ const avatar = {
 
 const careerPlatforms = [
   {
-    icon: {
-      class: "fas fa-file-lines",
-      color: { dark: "#6BB7FF", light: "#0E5CAD" },
-    },
+    icon: "fas fa-file-lines",
     title: "Currículo",
     description:
       "Página com o resumo da minha trajetória profissional. " +
@@ -28,10 +25,7 @@ const careerPlatforms = [
     href: "https://davidsantana06.github.io/resume",
   },
   {
-    icon: {
-      class: "fab fa-linkedin",
-      color: { dark: "#0A66C2", light: "#0077B5" },
-    },
+    icon: "fab fa-linkedin",
     title: "LinkedIn",
     description:
       "Perfil profissional com algumas atualizações do que andei " +
@@ -40,10 +34,7 @@ const careerPlatforms = [
     href: "https://www.linkedin.com/in/davidsantana06",
   },
   {
-    icon: {
-      class: "fab fa-github",
-      color: { dark: "#F0F6FC", light: "#181717" },
-    },
+    icon: "fab fa-github",
     title: "GitHub",
     description:
       "Repositório de código com meus principais projetos e " +
@@ -54,10 +45,7 @@ const careerPlatforms = [
 ];
 const gamePlatforms = [
   {
-    icon: {
-      class: "fab fa-steam",
-      color: { dark: "#66C0F4", light: "#1B2838" },
-    },
+    icon: "fab fa-steam",
     title: "Steam",
     description:
       "Minha plataforma de jogos atual. Migrei pra cá fugindo dos " +
@@ -65,10 +53,7 @@ const gamePlatforms = [
     href: "https://steamcommunity.com/id/_turles",
   },
   {
-    icon: {
-      class: "fab fa-playstation",
-      color: { dark: "#0082F0", light: "#003087" },
-    },
+    icon: "fab fa-playstation",
     title: "PlayStation",
     description:
       "Já fui fã da tal Sony. Hoje nem tanto, mas deixo o perfil aqui " +
@@ -78,10 +63,7 @@ const gamePlatforms = [
 ];
 const contentPlatforms = [
   {
-    icon: {
-      class: "fab fa-youtube",
-      color: { dark: "#FF4D4D", light: "#FF0000" },
-    },
+    icon: "fab fa-youtube",
     title: "YouTube",
     description:
       "Canal em construção, focado em jogos e, talvez, programação. " +
@@ -92,24 +74,20 @@ const contentPlatforms = [
 ];
 const donatePlatforms = [
   {
-    icon: {
-      class: "fab fa-paypal",
-      color: { dark: "#009CDE", light: "#003087" },
-    },
+    icon: "fab fa-paypal",
     title: "Doar via PayPal",
     href: "https://www.paypal.com/donate/?hosted_button_id=2P9HPGUP7Z43S",
   },
   {
-    icon: {
-      class: "fab fa-pix",
-      color: { dark: "#3EC6BD", light: "#00BFA5" },
-    },
+    icon: "fab fa-pix",
     title: "Doar via Pix",
     href: "https://tipa.ai/davidsantana06",
   },
 ];
 
 const blur = (element) => element.blur();
+
+const isEven = (number) => number % 2 === 0;
 
 const getUrlParams = () => {
   return new URLSearchParams(window.location.search);
