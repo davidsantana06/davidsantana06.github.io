@@ -21,7 +21,7 @@ const getAvatar = () => {
   };
 };
 
-const getPlatforms = (theme, hiddenPlatforms) => {
+const getPlatforms = (theme, hiddenSections) => {
   const careerPlatforms = [
     {
       icon: "fas fa-file-lines",
@@ -41,6 +41,9 @@ const getPlatforms = (theme, hiddenPlatforms) => {
         "cogitando me contratar.",
       href: "https://www.linkedin.com/in/davidsantana06",
     },
+  ];
+
+  const codePlatforms = [
     {
       icon: "fab fa-github",
       title: "GitHub",
@@ -48,7 +51,7 @@ const getPlatforms = (theme, hiddenPlatforms) => {
         "Repositório de código com meus principais projetos e " +
         "contribuições. Se tiver dúvida se eu realmente sei programar " +
         "ou só enrolo bem, pode fuçar tudo — de cabo a rabo.",
-      href: "https://github.com/davidsantana06?tab=repositories",
+      href: "https://github.com/davidsantana06",
     },
   ];
 
@@ -60,7 +63,7 @@ const getPlatforms = (theme, hiddenPlatforms) => {
         "Canal em construção, focado em jogos e, talvez, programação. " +
         "Dá pra ver minhas habilidades com edição de vídeo — ou pelo " +
         "menos minhas tentativas",
-      href: "https://www.youtube.com/@ExJogador",
+      href: "https://www.youtube.com/@exjogador",
     },
   ];
 
@@ -96,13 +99,15 @@ const getPlatforms = (theme, hiddenPlatforms) => {
     },
   ];
 
-  const isCareerHidden = hiddenPlatforms.includes("career");
-  const isGameHidden = hiddenPlatforms.includes("game");
-  const isContentHidden = hiddenPlatforms.includes("content");
-  const isDonateHidden = hiddenPlatforms.includes("donate");
+  const isCareerHidden = hiddenSections.includes("career");
+  const isCodeHidden = hiddenSections.includes("code");
+  const isGameHidden = hiddenSections.includes("game");
+  const isContentHidden = hiddenSections.includes("content");
+  const isDonateHidden = hiddenSections.includes("donate");
 
   return [
     ...(isCareerHidden ? [] : careerPlatforms),
+    ...(isCodeHidden ? [] : codePlatforms),
     ...(isContentHidden ? [] : contentPlatforms),
     ...(isGameHidden ? [] : gamePlatforms),
     ...(isDonateHidden ? [] : donatePlatforms),
@@ -122,11 +127,11 @@ const getTheme = (urlParams) => {
 const setTheme = (theme) =>
   document.documentElement.setAttribute("data-theme", theme);
 
-const getHiddenPlatforms = (urlParams) => urlParams.getAll("h");
+const getHiddenSections = (urlParams) => urlParams.getAll("h");
 
 const urlParams = getUrlParams();
 
 const theme = getTheme(urlParams);
 setTheme(theme);
 
-const hiddenPlatforms = getHiddenPlatforms(urlParams);
+const hiddenSections = getHiddenSections(urlParams);
