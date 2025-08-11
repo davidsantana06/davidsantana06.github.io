@@ -60,10 +60,9 @@ const getPlatforms = (theme, hiddenSections) => {
       icon: "fab fa-youtube",
       title: "YouTube",
       description:
-        "Canal em construção, focado em jogos e, talvez, programação. " +
-        "Dá pra ver minhas habilidades com edição de vídeo — ou pelo " +
-        "menos minhas tentativas",
-      href: "https://www.youtube.com/@exjogador",
+        "Canal focado em programação, ainda em construção. Dá pra ver " +
+        "minhas habilidades em edição — ou pelo menos minhas tentativas",
+      href: "https://www.youtube.com/@davidsantana06",
     },
   ];
 

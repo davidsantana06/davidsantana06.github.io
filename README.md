@@ -17,10 +17,10 @@
 
 A customização da página pode ser feita através de parâmetros na URL (_query parameters_), sendo possível definir o tema e ocultar um ou mais grupos de plataformas.
 
-| Parâmetro      | Funcionalidade                    |
-| -------------- | --------------------------------- |
-| `t=dark`       | Atribui o tema escuro (padrão)    |
-| `t=light`      | Atribui o tema claro              |
+| Parâmetro   | Funcionalidade                    |
+| ----------- | --------------------------------- |
+| `t=dark`    | Atribui o tema escuro (padrão)    |
+| `t=light`   | Atribui o tema claro              |
 | `h=career`  | Oculta as plataformas de carreira |
 | `h=game`    | Oculta as plataformas de jogos    |
 | `h=content` | Oculta as plataformas de conteúdo |
