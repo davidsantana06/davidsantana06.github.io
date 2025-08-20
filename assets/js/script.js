@@ -98,29 +98,21 @@ const getPlatforms = (theme, hiddenSections) => {
     },
   ];
 
-  const isCareerHidden = hiddenSections.includes("career");
-  const isCodeHidden = hiddenSections.includes("code");
-  const isGameHidden = hiddenSections.includes("game");
-  const isContentHidden = hiddenSections.includes("content");
-  const isDonateHidden = hiddenSections.includes("donate");
-
   return [
-    ...(isCareerHidden ? [] : careerPlatforms),
-    ...(isCodeHidden ? [] : codePlatforms),
-    ...(isContentHidden ? [] : contentPlatforms),
-    ...(isGameHidden ? [] : gamePlatforms),
-    ...(isDonateHidden ? [] : donatePlatforms),
+    ...(hiddenSections.includes("career") ? [] : careerPlatforms),
+    ...(hiddenSections.includes("code") ? [] : codePlatforms),
+    ...(hiddenSections.includes("content") ? [] : contentPlatforms),
+    ...(hiddenSections.includes("game") ? [] : gamePlatforms),
+    ...(hiddenSections.includes("donate") ? [] : donatePlatforms),
   ];
 };
 
-const getUrlParams = () => {
-  return new URLSearchParams(window.location.search);
-};
+const getUrlParams = () => new URLSearchParams(window.location.search);
 
 const getTheme = (urlParams) => {
   const theme = urlParams.get("t");
-  const isThemeValid = ["dark", "light"].includes(theme);
-  return isThemeValid ? theme : "dark";
+  const isValid = ["dark", "light"].includes(theme);
+  return isValid ? theme : "dark";
 };
 
 const setTheme = (theme) =>
