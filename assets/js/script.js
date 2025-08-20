@@ -1,7 +1,3 @@
-const blur = (element) => element.blur();
-
-const isEven = (number) => number % 2 === 0;
-
 const getTitle = () => "David Santana";
 
 const getSubtitle = () =>
@@ -113,14 +109,16 @@ const getPlatforms = (theme, hiddenSections) => {
   ];
 };
 
-const getUrlParams = () => {
-  return new URLSearchParams(window.location.search);
-};
+const blur = (element) => element.blur();
+
+const isEven = (number) => number % 2 === 0;
+
+const getUrlParams = () => new URLSearchParams(window.location.search);
 
 const getTheme = (urlParams) => {
   const theme = urlParams.get("t");
-  const isThemeValid = ["dark", "light"].includes(theme);
-  return isThemeValid ? theme : "dark";
+  const isValid = ["dark", "light"].includes(theme);
+  return isValid ? theme : "dark";
 };
 
 const setTheme = (theme) =>
