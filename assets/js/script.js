@@ -73,7 +73,7 @@ const getPlatforms = (theme, hiddenSections) => {
       description:
         "Minha plataforma de jogos atual. Migrei pra cá fugindo dos " +
         "preços surreais dos consoles. E olha, não me arrependo.",
-      href: "https://steamcommunity.com/id/_turles",
+      href: "https://steamcommunity.com/id/davidsantana06",
     },
     {
       icon: "fab fa-playstation",
