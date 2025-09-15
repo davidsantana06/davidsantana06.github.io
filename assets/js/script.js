@@ -19,7 +19,7 @@ const getAvatar = () => {
   };
 };
 
-const getPlatforms = (theme, hiddenSections) => {
+const getPlatforms = (hiddenSections) => {
   const careerPlatforms = [
     {
       icon: "fas fa-file-lines",
@@ -28,7 +28,7 @@ const getPlatforms = (theme, hiddenSections) => {
         "Documento com o resumo da minha trajetória profissional. " +
         "Se estiver pensando em me contratar, dê uma boa olhada " +
         "(sério mesmo).",
-      href: `./assets/docs/davidsantana06-${theme}.pdf`,
+      href: `./assets/docs/David Santana — Desenvolvedor Full Stack (Currículo).pdf`,
     },
     {
       icon: "fab fa-linkedin",
