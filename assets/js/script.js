@@ -4,9 +4,7 @@ const isEven = (number) => number % 2 === 0;
 
 const getTitle = () => "David Santana";
 
-const getSubtitle = () =>
-  "Programador, designer, produtor de conteúdo " +
-  "e tudo o que você puder imaginar";
+const getSubtitle = () => "Programador e tudo o que você puder imaginar";
 
 const getAvatar = () => {
   return {
