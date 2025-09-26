@@ -86,7 +86,7 @@ const getPlatforms = (hiddenSections) => {
   const donatePlatforms = [
     {
       icon: "fab fa-paypal",
-      title: "Doar via PayPal",
+      title: "Contribuir via PayPal",
       href: "https://www.paypal.com/donate/?hosted_button_id=2P9HPGUP7Z43S",
     },
     {
