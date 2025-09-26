@@ -91,7 +91,7 @@ const getPlatforms = (hiddenSections) => {
     },
     {
       icon: "fab fa-pix",
-      title: "Doar via Pix",
+      title: "Contribuir via Pix",
       href: "https://tipa.ai/davidsantana06",
     },
   ];
