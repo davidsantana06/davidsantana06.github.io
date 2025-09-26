@@ -34,9 +34,9 @@ const getPlatforms = (hiddenSections) => {
       icon: "fab fa-linkedin",
       title: "LinkedIn",
       description:
-        "Perfil profissional com algumas atualizações do que andei " +
-        "fazendo nos últimos anos. Também vale a visita, caso esteja " +
-        "cogitando me contratar.",
+        "Perfil profissional com atualizações do que andei fazendo " +
+        "nos últimos anos. Também vale a visita, caso esteja cogitando " +
+        "me contratar.",
       href: "https://www.linkedin.com/in/davidsantana06",
     },
   ];
