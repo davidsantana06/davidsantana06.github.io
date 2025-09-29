@@ -1,8 +1,10 @@
-<p align="center">
-  <img src="./assets/img/base-avatar.jpeg" alt="davidsantana06" width="128">
-</p>
+<img
+  src="./assets/img/usage.gif"
+  alt="davidsantana06.github.io — Uso"
+  style="width: 100%"
+/>
 
-**davidsantana06.github.io** é o meu agregador de links personalizando, nada inspirado no Linktree, contendo as plataformas que considerei mais relevantes para exibição pública. O mais interessante dessa plataforma é a possibilidade de personalizar o tema e os links presentes na página.
+**🌐 davidsantana06.github.io** é o meu agregador de links personalizando, nada inspirado no Linktree, contendo as plataformas que considerei mais relevantes para exibição pública. O mais interessante dessa plataforma é a possibilidade de personalizar o tema e os links presentes na página.
 
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 ![Alpine.js](https://img.shields.io/badge/alpinejs-white.svg?style=for-the-badge&logo=alpinedotjs&logoColor=%238BC0D0)
@@ -26,7 +28,7 @@ A customização da página pode ser feita através de parâmetros na URL (_quer
 | `h=content` | Oculta as plataformas de conteúdo |
 | `h=donate`  | Oculta as plataformas de doação   |
 
-Por exemplo, ao acessar `https://davidsantana06.github.io?t=light&h=game&h=content`, a página será exibida com o tema claro e sem as seções de jogos e de conteúdo.
+Por exemplo, ao acessar `https://davidsantana06.github.io?t=light&h=game&h=donate`, a página será exibida com o tema claro e sem as seções de jogos e de doação.
 
 ### ⚖️ Licença
 
