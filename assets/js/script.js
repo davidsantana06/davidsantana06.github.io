@@ -22,15 +22,6 @@ const getAvatar = () => {
 const getPlatforms = (shownSections) => {
   const careerPlatforms = [
     {
-      icon: "fas fa-file-lines",
-      title: "Currículo",
-      description:
-        "Documento com o resumo da minha trajetória profissional. " +
-        "Se estiver pensando em me contratar, dê uma boa olhada " +
-        "(sério mesmo).",
-      href: "https://drive.google.com/file/d/10UROX7wZbtqWpuO5e9Qz9dVYD3wFLU1y/view",
-    },
-    {
       icon: "fab fa-linkedin",
       title: "LinkedIn",
       description:
