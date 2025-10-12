@@ -20,41 +20,6 @@ const getAvatar = () => {
 };
 
 const getPlatforms = (shownSections) => {
-  const careerPlatforms = [
-    {
-      icon: "fab fa-linkedin",
-      title: "LinkedIn",
-      description:
-        "Perfil profissional com atualizações do que andei fazendo " +
-        "nos últimos anos. Também vale a visita, caso esteja cogitando " +
-        "me contratar.",
-      href: "https://www.linkedin.com/in/davidsantana06",
-    },
-  ];
-
-  const codePlatforms = [
-    {
-      icon: "fab fa-github",
-      title: "GitHub",
-      description:
-        "Repositório de código com meus principais projetos e " +
-        "contribuições. Se tiver dúvida se eu realmente sei programar " +
-        "ou só enrolo bem, pode fuçar tudo — de cabo a rabo.",
-      href: "https://github.com/davidsantana06",
-    },
-  ];
-
-  const contentPlatforms = [
-    {
-      icon: "fab fa-youtube",
-      title: "YouTube",
-      description:
-        "Canal focado em programação, ainda em construção. Dá pra ver " +
-        "minhas habilidades em edição — ou pelo menos minhas tentativas",
-      href: "https://www.youtube.com/@davidsantana06",
-    },
-  ];
-
   const gamePlatforms = [
     {
       icon: "fab fa-steam",
@@ -88,9 +53,32 @@ const getPlatforms = (shownSections) => {
   ];
 
   return [
-    ...careerPlatforms,
-    ...codePlatforms,
-    ...contentPlatforms,
+    {
+      icon: "fab fa-linkedin",
+      title: "LinkedIn",
+      description:
+        "Perfil profissional com atualizações do que andei fazendo " +
+        "nos últimos anos. Vale a visita, principalmente se estiver " +
+        "cogitando me contratar.",
+      href: "https://www.linkedin.com/in/davidsantana06",
+    },
+    {
+      icon: "fab fa-github",
+      title: "GitHub",
+      description:
+        "Repositório de código com meus principais projetos e " +
+        "contribuições. Se tiver dúvida se eu realmente sei programar " +
+        "ou só enrolo bem, pode fuçar tudo — de cabo a rabo.",
+      href: "https://github.com/davidsantana06",
+    },
+    {
+      icon: "fab fa-youtube",
+      title: "YouTube",
+      description:
+        "Canal focado em programação, ainda em construção. Dá pra ver " +
+        "minhas habilidades em edição — ou pelo menos minhas tentativas",
+      href: "https://www.youtube.com/@davidsantana06",
+    },
     ...(shownSections.includes("game") ? gamePlatforms : []),
     ...(shownSections.includes("donate") ? donatePlatforms : []),
   ];

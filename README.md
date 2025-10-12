@@ -4,7 +4,7 @@
   style="width: 100%"
 />
 
-**🌐 davidsantana06.github.io** é o meu agregador de links personalizando, nada inspirado no Linktree, contendo as plataformas que considerei mais relevantes para exibição pública. O mais interessante dessa plataforma é a possibilidade de personalizar o tema e os links presentes na página.
+**🌐 davidsantana06.github.io** é meu agregador de links personalizado, nada inspirado no Linktree, reunindo as plataformas que considerei mais relevantes para exibição pública. O diferencial está na possibilidade de personalizar o tema e os links da página.
 
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 ![Alpine.js](https://img.shields.io/badge/alpinejs-white.svg?style=for-the-badge&logo=alpinedotjs&logoColor=%238BC0D0)
