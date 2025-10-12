@@ -19,7 +19,7 @@ const getAvatar = () => {
   };
 };
 
-const getPlatforms = (hiddenSections) => {
+const getPlatforms = (shownSections) => {
   const careerPlatforms = [
     {
       icon: "fas fa-file-lines",
@@ -97,11 +97,11 @@ const getPlatforms = (hiddenSections) => {
   ];
 
   return [
-    ...(hiddenSections.includes("career") ? [] : careerPlatforms),
-    ...(hiddenSections.includes("code") ? [] : codePlatforms),
-    ...(hiddenSections.includes("content") ? [] : contentPlatforms),
-    ...(hiddenSections.includes("game") ? [] : gamePlatforms),
-    ...(hiddenSections.includes("donate") ? [] : donatePlatforms),
+    ...careerPlatforms,
+    ...codePlatforms,
+    ...contentPlatforms,
+    ...(shownSections.includes("game") ? gamePlatforms : []),
+    ...(shownSections.includes("donate") ? donatePlatforms : []),
   ];
 };
 
@@ -116,11 +116,11 @@ const getTheme = (urlParams) => {
 const setTheme = (theme) =>
   document.documentElement.setAttribute("data-theme", theme);
 
-const getHiddenSections = (urlParams) => urlParams.getAll("h");
+const getShownSections = (urlParams) => urlParams.getAll("s");
 
 const urlParams = getUrlParams();
 
 const theme = getTheme(urlParams);
 setTheme(theme);
 
-const hiddenSections = getHiddenSections(urlParams);
+const shownSections = getShownSections(urlParams);

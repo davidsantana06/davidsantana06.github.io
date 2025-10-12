@@ -44,7 +44,7 @@
       <div class="list" style="max-width: 640px">
         <template
           x-for="(platform, index) in platforms"
-          x-data="{ blur, isEven, platforms: getPlatforms(hiddenSections) }"
+          x-data="{ blur, isEven, platforms: getPlatforms(shownSections) }"
         >
           <a
             class="list-item box is-zoomable px-5"

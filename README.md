@@ -17,18 +17,16 @@
 
 ### 🖌️ Customização
 
-A customização da página pode ser feita através de parâmetros na URL (_query parameters_), sendo possível definir o tema e ocultar um ou mais grupos de plataformas.
+A customização da página pode ser feita através dos seguintes parâmetros na URL:
 
-| Parâmetro   | Funcionalidade                    |
-| ----------- | --------------------------------- |
-| `t=dark`    | Atribui o tema escuro (padrão)    |
-| `t=light`   | Atribui o tema claro              |
-| `h=career`  | Oculta as plataformas de carreira |
-| `h=game`    | Oculta as plataformas de jogos    |
-| `h=content` | Oculta as plataformas de conteúdo |
-| `h=donate`  | Oculta as plataformas de doação   |
+| Parâmetro  | Funcionalidade                 |
+| ---------- | ------------------------------ |
+| `t=dark`   | Atribui o tema escuro (padrão) |
+| `t=light`  | Atribui o tema claro           |
+| `s=game`   | Exibe a seção de jogos         |
+| `s=donate` | Exibe a seção de doação        |
 
-Por exemplo, ao acessar `https://davidsantana06.github.io?t=light&h=game&h=donate`, a página será exibida com o tema claro e sem as seções de jogos e de doação.
+Por exemplo, ao acessar `https://davidsantana06.github.io?t=light&s=donate`, a página será exibida com o tema claro e com a seção de doação.
 
 ### ⚖️ Licença
 
