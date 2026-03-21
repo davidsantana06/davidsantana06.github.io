@@ -16,5 +16,13 @@ html {
 }
 
 .is-max-width-256 {
-  max-width: 256px !important;
+  width: 100%;
+  max-width: 256px;
+}
+
+@media (min-width: 769px) {
+  .is-max-width-384-tablet {
+    width: 100%;
+    max-width: 384px;
+  }
 }
