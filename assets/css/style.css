@@ -1,12 +1,18 @@
+:root {
+  --bulma-primary-h: 203deg;
+  --bulma-primary-s: 33%;
+  --bulma-primary-l: 55%;
+  --bulma-link-h: 206deg;
+  --bulma-link-s: 42%;
+  --bulma-link-l: 22%;
+}
+
 html {
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
 }
 
-.container {
-  scroll-snap-align: start;
-}
-
+.container,
 .hero {
   scroll-snap-align: start;
 }
