@@ -1,4 +1,5 @@
 <!doctype html>
+
 <html lang="pt-br" data-theme="light">
   <head>
     <meta charset="UTF-8" />
@@ -7,6 +8,7 @@
     <link rel="icon" href="./assets/favicon.ico" />
     <link rel="stylesheet" href="./assets/vendor/bulma.min.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <script defer src="./assets/vendor/alpinejs.min.js"></script>
     <script defer src="./assets/vendor/fontawesome.min.js"></script>
   </head>
 
@@ -16,229 +18,72 @@
         <aside class="column is-3">
           <figure class="image is-flex is-justify-content-center">
             <img
-              class="is-max-width-256 is-rounded has-shadow"
+              class="is-max-width-256 is-rounded is-zoomable has-shadow"
               src="./assets/img/davidsantana06.png"
             />
           </figure>
         </aside>
 
         <div class="column">
-          <main>
-            <h1 class="title is-4">David Santana</h1>
-            <h2 class="subtitle is-6 mb-3">Desenvolvedor Full Stack</h2>
-            <p class="mb-3">
-              Desenvolvedor full stack e bacharel em Sistemas de Informação, com
-              mais de 3 anos de atuação em soluções web. Possuo forte domínio em
-              backend e bancos de dados (SQL e NoSQL), além de experiência em
-              frontend, automação, qualidade de software (QA) e cloud computing.
-            </p>
+          <main x-data="{ name, summary, platforms } = main">
+            <h1 class="title is-4 mb-3" x-text="name"></h1>
+            <p class="mb-3" x-html="summary"></p>
             <div class="is-flex is-align-items-center is-gap-2">
-              <a
-                class="icon-text has-text-primary"
-                href="https://github.com/davidsantana06"
-                target="_blank"
-              >
-                <span class="icon">
-                  <i class="fa-brands fa-linkedin"></i>
-                </span>
-                <span>LinkedIn</span>
-              </a>
-              <a
-                class="icon-text has-text-link"
-                href="https://github.com/davidsantana06"
-                target="_blank"
-              >
-                <span class="icon">
-                  <i class="fa-brands fa-github"></i>
-                </span>
-                <span>GitHub</span>
-              </a>
+              <template x-for="(platform, index) in platforms">
+                <a
+                  class="icon-text is-zoomable"
+                  :class="isOdd(index) ? 'has-text-link' : 'has-text-primary'"
+                  :href="platform.url"
+                  target="_blank"
+                >
+                  <span class="icon">
+                    <i :class="platform.faIcon"></i>
+                  </span>
+                  <span x-text="platform.label"></span>
+                </a>
+              </template>
             </div>
           </main>
         </div>
       </div>
     </div>
 
-    <section class="hero is-dark is-fullheight">
-      <div
-        class="hero-body is-align-items-start is-flex-direction-column is-justify-content-center"
+    <template x-data="innerSections" x-for="(section, index) in innerSections">
+      <section
+        class="hero is-fullheight"
+        :class="isOdd(index + 1) && 'is-dark'"
       >
-        <h3 class="title is-5">Principais experiências</h3>
+        <div
+          class="hero-body is-align-items-start is-flex-direction-column is-justify-content-center"
+        >
+          <h3 class="title is-5 mb-0" x-text="section.title"></h3>
 
-        <div class="mb-5">
-          <h4 class="title is-6">Desenvolvedor Full Stack</h4>
-          <h5 class="subtitle is-7 mb-2">
-            <b>SENAI CIMATEC</b>
-            &#8226; Jun. de 2024 &rarr; Presente
-          </h5>
-          <ul class="pl-5 is-flex is-flex-direction-column is-gap-1">
-            <li>
-              Desenvolvi o backend de uma plataforma de telemedicina nacional
-              com NestJS e Prisma ORM, organizando módulos em arquitetura de
-              camadas, implementando controle de acesso por roles (RBAC) e
-              entregando uma API REST segura, escalável e de fácil manutenção.
-            </li>
-            <li>
-              Com base nesse servidor, construí um painel administrativo com
-              Next.js e React a partir de protótipos no Figma, permitindo
-              gerenciar pacientes, profissionais de saúde, contratos
-              empresariais e outros registros essenciais para o ecossistema.
-            </li>
-            <li>
-              Integrei um sistema de videoconferência open source, Jitsi Meet,
-              em aplicações frontend com React, permitindo que usuários em
-              diferentes regiões do Brasil realizem chamadas de vídeo seguras e
-              privadas.
-            </li>
-            <li>
-              Elaborei o subsistema de relatórios de uma plataforma de controle
-              de ponto com NestJS, Puppeteer e Bulma, integrando PostgreSQL e
-              MongoDB, permitindo consultas estatísticas por vínculos
-              empregatícios e critérios de busca avançados.
-            </li>
-            <li>
-              Implementei uma suíte de testes automatizados com Jest, cobrindo
-              cerca de 80% da base de código existente e garantindo conformidade
-              com os critérios de qualidade definidos no SonarQube.
-            </li>
-          </ul>
+          <template x-for="entry in section.entries">
+            <div class="mt-5">
+              <h4 class="title is-6" x-text="entry.title"></h4>
+
+              <h5 class="subtitle is-7 mb-0">
+                <template x-if="entry.organization">
+                  <b x-text="`${entry.organization} &#8226;`"></b>
+                </template>
+
+                <span
+                  x-text="`${entry.startDate} &rarr; ${entry.endDate}`"
+                ></span>
+              </h5>
+
+              <template x-if="entry.bullets">
+                <ul class="pl-5 is-flex is-flex-direction-column is-gap-1 mt-2">
+                  <template x-for="bullet in entry.bullets">
+                    <li x-text="bullet"></li>
+                  </template>
+                </ul>
+              </template>
+            </div>
+          </template>
         </div>
-
-        <div>
-          <h4 class="title is-6">Desenvolvedor Full Stack</h4>
-          <h5 class="subtitle is-7 mb-2">
-            <b>Prefeitura de Vitória da Conquista</b>
-            &#8226; Fev. de 2023 &rarr; Fev. de 2024
-          </h5>
-          <ul class="pl-5 is-flex is-flex-direction-column is-gap-1">
-            <li>
-              Construí uma aplicação desktop com Flask e Pandas para automatizar
-              a geração de registros personalizados com nome e dieta de
-              recém-nascidos, produzindo registros padronizados e reduzindo
-              significativamente a intervenção manual.
-            </li>
-            <li>
-              Liderei a implementação e configuração do NovoSGA, sistema open
-              source de gerenciamento de atendimentos, em uma unidade de saúde,
-              garantindo operação plena desde a inauguração e aprimorando a
-              eficiência na emissão de senhas e organização das filas de
-              atendimento.
-            </li>
-            <li>
-              Criei um robô RPA em Python para validar cadastros de novos
-              pacientes via API externa, habilitando o processo de login e
-              definindo níveis de acesso automaticamente em larga escala.
-            </li>
-            <li>
-              Projetei, documentei e implementei uma aplicação web monolítica
-              para criação de formulários online a partir de planilhas Excel,
-              utilizando Flask, Jinja e Bootstrap, substituindo o processo
-              manual em papel por coleta digital estruturada de dados em
-              secretarias públicas.
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section class="hero is-fullheight">
-      <div
-        class="hero-body is-align-items-start is-flex-direction-column is-justify-content-center"
-      >
-        <h3 class="title is-5">Formação acadêmica</h3>
-
-        <div class="mb-5">
-          <h4 class="title is-6">
-            Pós-Graduação Lato Senso em Desenvolvimento Web
-          </h4>
-          <h5 class="subtitle is-7">
-            <b>Instituto Federal da Bahia (IFBA)</b>
-            &#8226; Mar. de 2026 &rarr; Presente
-          </h5>
-        </div>
-
-        <div>
-          <h4 class="title is-6">Bacharelado em Sistemas de Informação</h4>
-          <h5 class="subtitle is-7 mb-2">
-            <b>Instituto Federal da Bahia (IFBA)</b>
-            &#8226; Mar. de 2021 &rarr; Nov. de 2025
-          </h5>
-        </div>
-      </div>
-    </section>
-
-    <section class="hero is-dark is-fullheight">
-      <div
-        class="hero-body is-align-items-start is-flex-direction-column is-justify-content-center"
-      >
-        <h3 class="title is-5">Últimos projetos</h3>
-
-        <div class="mb-5">
-          <h4 class="title is-6">OrdersApp</h4>
-          <h5 class="subtitle is-7 mb-2">Jan. de 2026 &rarr; Fev. de 2026</h5>
-          <ul class="pl-5 is-flex is-flex-direction-column is-gap-1">
-            <li>
-              Aplicação full stack voltada à gestão de pedidos de produtos em
-              diferentes segmentos.
-            </li>
-            <li>
-              A solução centraliza o registro de itens com marca, modelo e ano,
-              permitindo requisições tanto via API, desenvolvida em .NET, quanto
-              por interface web construída em Angular.
-            </li>
-            <li>
-              Sua arquitetura em camadas organiza as responsabilidades de forma
-              clara, adotando Component-Based Architecture no frontend, alinhada
-              ao MVVM, e um backend próximo ao MVC com Service Layer, com
-              operações críticas otimizadas por meio de triggers e stored
-              procedures implementadas diretamente no banco de dados.
-            </li>
-          </ul>
-        </div>
-
-        <div class="mb-5">
-          <h4 class="title is-6">Resuming</h4>
-          <h5 class="subtitle is-7 mb-2">Fev. de 2025 &rarr; Nov. de 2025</h5>
-          <ul class="pl-5 is-flex is-flex-direction-column is-gap-1">
-            <li>
-              Plataforma focada na criação e compartilhamento de currículos,
-              feita sob medida para desenvolvedores.
-            </li>
-            <li>
-              O projeto resolve a falta de objetividade em portfólios,
-              permitindo gerir trajetórias acadêmicas e profissionais via API.
-            </li>
-            <li>
-              O destaque é a visibilidade do perfil: uma página web exclusiva
-              com URL curta e elegante (resuming.dev), ideal para divulgação.
-            </li>
-          </ul>
-        </div>
-
-        <div>
-          <h4 class="title is-6">AI Evaluation</h4>
-          <h5 class="subtitle is-7 mb-2">Jun. de 2025 &rarr; Set. de 2025</h5>
-          <ul class="pl-5 is-flex is-flex-direction-column is-gap-1">
-            <li>
-              Aplicação web que coloca frente a frente imagens geradas por
-              diferentes modelos de inteligência artificial a partir de um único
-              prompt.
-            </li>
-            <li>
-              O sistema soluciona a dificuldade de comparar a qualidade entre
-              modelos, centralizando os resultados em uma interface de votação
-              intuitiva.
-            </li>
-            <li>
-              O diferencial é o duelo de perspectivas: o ChatGPT realiza uma
-              avaliação técnica prévia das imagens e, logo depois, você dá o seu
-              veredito, confrontando a opinião da máquina com a sua percepção
-              humana.
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
+      </section>
+    </template>
 
     <section class="hero is-fullheight">
       <div class="hero-body is-flex-direction-column is-justify-content-center">
@@ -326,5 +171,7 @@
         </form>
       </div>
     </section>
+
+    <script src="./assets/js/script.js"></script>
   </body>
 </html>
