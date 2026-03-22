@@ -12,6 +12,10 @@ html {
   overflow-y: scroll;
 }
 
+ul {
+  list-style-type: disc;
+}
+
 .container,
 .hero {
   scroll-snap-align: start;
