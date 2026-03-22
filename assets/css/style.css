@@ -8,7 +8,7 @@
 }
 
 html {
-  scroll-snap-type: y mandatory;
+  scroll-snap-type: y proximity;
   overflow-y: scroll;
 }
 
@@ -21,7 +21,7 @@ ul {
   scroll-snap-align: start;
 }
 
-.hero.is-full-height {
+.hero.is-fullheight {
   min-height: 100svh !important;
 }
 
