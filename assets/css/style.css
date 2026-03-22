@@ -36,3 +36,11 @@ ul {
     max-width: 384px;
   }
 }
+
+.is-zoomable {
+  transition: transform 0.2s ease !important;
+}
+
+.is-zoomable:hover {
+  transform: scale(1.05);
+}
