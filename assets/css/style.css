@@ -22,7 +22,7 @@ ul {
 }
 
 .hero.is-fullheight {
-  min-height: 100svh !important;
+  min-height: 100vh !important;
 }
 
 .is-max-width-256 {
