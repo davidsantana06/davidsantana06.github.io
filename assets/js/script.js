@@ -1,4 +1,4 @@
-const isOdd = (index) => index % 2 == 1;
+const isEven = (index) => index % 2 == 0;
 
 const main = {
   name: "David Santana",
@@ -79,6 +79,10 @@ const projectSection = {
         "A solução centraliza o registro de itens com marca, modelo e ano, permitindo requisições tanto via API, desenvolvida em .NET, quanto por interface web construída em Angular.",
         "Sua arquitetura em camadas organiza as responsabilidades de forma clara, adotando Component-Based Architecture no frontend, alinhada ao MVVM, e um backend próximo ao MVC com Service Layer, com operações críticas otimizadas por meio de triggers e stored procedures implementadas diretamente no banco de dados.",
       ],
+      reference: {
+        label: "Acessar repositório",
+        url: "https://github.com/davidsantana06/orders-app",
+      },
     },
     {
       title: "Resuming",
@@ -89,6 +93,10 @@ const projectSection = {
         "O projeto resolve a falta de objetividade em portfólios, permitindo gerir trajetórias acadêmicas e profissionais via API.",
         "O destaque é a visibilidade do perfil: uma página web exclusiva com URL curta e elegante (resuming.dev), ideal para divulgação.",
       ],
+      reference: {
+        label: "Acessar repositório",
+        url: "https://github.com/davidsantana06/resuming",
+      },
     },
     {
       title: "AI Evaluation",
@@ -99,6 +107,10 @@ const projectSection = {
         "O sistema soluciona a dificuldade de comparar a qualidade entre modelos, centralizando os resultados em uma interface de votação intuitiva.",
         "O diferencial é o duelo de perspectivas: o ChatGPT realiza uma avaliação técnica prévia das imagens e, logo depois, você dá o seu veredito, confrontando a opinião da máquina com a sua percepção humana.",
       ],
+      reference: {
+        label: "Acessar repositório",
+        url: "https://github.com/davidsantana06/ai-evaluation",
+      },
     },
   ],
 };

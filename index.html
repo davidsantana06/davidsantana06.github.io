@@ -32,7 +32,7 @@
               <template x-for="(platform, index) in platforms">
                 <a
                   class="icon-text is-zoomable"
-                  :class="isOdd(index) ? 'has-text-link' : 'has-text-primary'"
+                  :class="isEven(index) && 'has-text-primary'"
                   :href="platform.url"
                   target="_blank"
                 >
@@ -49,10 +49,7 @@
     </div>
 
     <template x-data="innerSections" x-for="(section, index) in innerSections">
-      <section
-        class="hero is-fullheight"
-        :class="isOdd(index + 1) && 'is-dark'"
-      >
+      <section class="hero is-fullheight" :class="isEven(index) && 'is-dark'">
         <div
           class="hero-body is-align-items-start is-flex-direction-column is-justify-content-center"
         >
@@ -71,6 +68,19 @@
                   x-text="`${entry.startDate} &rarr; ${entry.endDate}`"
                 ></span>
               </h5>
+
+              <template x-if="entry.reference">
+                <a
+                  class="icon-text has-text-primary mt-1"
+                  :href="entry.reference.url"
+                  target="_blank"
+                >
+                  <span x-text="entry.reference.label"></span>
+                  <span class="icon">
+                    <i class="fas fa-arrow-up-right-from-square"></i>
+                  </span>
+                </a>
+              </template>
 
               <template x-if="entry.bullets">
                 <ul class="pl-5 is-flex is-flex-direction-column is-gap-1 mt-2">
