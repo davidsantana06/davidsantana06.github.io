@@ -31,7 +31,7 @@
             <div class="is-flex is-align-items-center is-gap-2">
               <template x-for="(platform, index) in platforms">
                 <a
-                  class="icon-text is-zoomable"
+                  class="icon-text"
                   :class="isEven(index) && 'has-text-primary'"
                   :href="platform.url"
                   target="_blank"
@@ -48,7 +48,10 @@
       </div>
     </div>
 
-    <template x-data="innerSections" x-for="(section, index) in innerSections">
+    <template
+      x-data="innerSections = [experienceSection, formationSection, projectSection]"
+      x-for="(section, index) in innerSections"
+    >
       <section class="hero is-fullheight" :class="isEven(index) && 'is-dark'">
         <div
           class="hero-body is-align-items-start is-flex-direction-column is-justify-content-center"

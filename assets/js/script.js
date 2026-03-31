@@ -19,7 +19,7 @@ const main = {
 };
 
 const experienceSection = {
-  title: "Principais experiências",
+  title: "Experiências profissionais",
   entries: [
     {
       title: "Desenvolvedor full stack",
@@ -32,6 +32,7 @@ const experienceSection = {
         "Integrei um sistema de videoconferência open source, Jitsi Meet, em aplicações frontend com React, permitindo que usuários em diferentes regiões do Brasil realizem chamadas de vídeo seguras e privadas.",
         "Elaborei o subsistema de relatórios de uma plataforma de controle de ponto com NestJS, Puppeteer e Bulma, integrando PostgreSQL e MongoDB, permitindo consultas estatísticas por vínculos empregatícios e critérios de busca avançados.",
         "Implementei uma suíte de testes automatizados com Jest, cobrindo cerca de 80% da base de código existente e garantindo conformidade com os critérios de qualidade definidos no SonarQube.",
+        "Atualmente trabalho com tecnologias blockchain, focando no desenvolvimento de smart contracts e aplicações descentralizadas (dApps).",
       ],
     },
     {
@@ -57,6 +58,13 @@ const formationSection = {
       organization: "Instituto Federal da Bahia (IFBA)",
       startDate: "Mar. de 2026",
       endDate: "Presente",
+      bullets: [
+        "Algoritmos, Estrutura de Dados, Engenharia de Software e Análise de Sistemas.",
+        "Qualidade de Software, UX/UI, Desenvolvimento Web e Desenvolvimento Mobile.",
+        "Banco de Dados, Sistemas Distribuídos e Inteligência Artificial.",
+        "Scrum, Kanban e Business Intelligence.",
+        "Governança de TI, Segurança da Informação e Administração de Redes.",
+      ],
     },
     {
       title: "Bacharelado em Sistemas de Informação",
@@ -68,7 +76,7 @@ const formationSection = {
 };
 
 const projectSection = {
-  title: "Últimos projetos",
+  title: "Projetos",
   entries: [
     {
       title: "OrdersApp",
@@ -80,7 +88,7 @@ const projectSection = {
         "Sua arquitetura em camadas organiza as responsabilidades de forma clara, adotando Component-Based Architecture no frontend, alinhada ao MVVM, e um backend próximo ao MVC com Service Layer, com operações críticas otimizadas por meio de triggers e stored procedures implementadas diretamente no banco de dados.",
       ],
       reference: {
-        label: "Acessar repositório",
+        label: "Acessar repositório (GitHub)",
         url: "https://github.com/davidsantana06/orders-app",
       },
     },
@@ -94,25 +102,23 @@ const projectSection = {
         "O destaque é a visibilidade do perfil: uma página web exclusiva com URL curta e elegante (resuming.dev), ideal para divulgação.",
       ],
       reference: {
-        label: "Acessar repositório",
+        label: "Acessar repositório (GitHub)",
         url: "https://github.com/davidsantana06/resuming",
       },
     },
     {
-      title: "AI Evaluation",
-      startDate: "Jun. de 2025",
-      endDate: "Set. de 2025",
+      title: "Implantação do pEATL (RPG browser-based)",
+      startDate: "Out. de 2012",
+      endDate: "Nov. de 2012",
       bullets: [
-        "Aplicação web que coloca frente a frente imagens geradas por diferentes modelos de inteligência artificial a partir de um único prompt.",
-        "O sistema soluciona a dificuldade de comparar a qualidade entre modelos, centralizando os resultados em uma interface de votação intuitiva.",
-        "O diferencial é o duelo de perspectivas: o ChatGPT realiza uma avaliação técnica prévia das imagens e, logo depois, você dá o seu veredito, confrontando a opinião da máquina com a sua percepção humana.",
+        "Meu primeiro projeto prático em tecnologia, no qual implantei um servidor privado a partir de uma versão modificada do AdventureQuest Worlds, marcando meu contato inicial com código-fonte e customização de aplicações — desenvolvido aos 10 anos de idade.",
+        "Adaptei a base existente com inclusão de novos itens e ajustes na interface principal, explorando na prática manipulação de assets, estrutura web e organização de arquivos.",
+        "Executei o deploy localmente, viabilizando o acesso externo via VPN (LogMeIn Hamachi), o que me introduziu a noções de rede, distribuição e disponibilidade.",
       ],
       reference: {
-        label: "Acessar repositório",
-        url: "https://github.com/davidsantana06/ai-evaluation",
+        label: "Acessar vídeo (YouTube)",
+        url: "https://youtu.be/htxKAjm1iLc",
       },
     },
   ],
 };
-
-const innerSections = [experienceSection, formationSection, projectSection];
