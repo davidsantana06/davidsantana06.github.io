@@ -7,6 +7,7 @@
     <title>David Santana</title>
     <link rel="icon" href="./assets/favicon.ico" />
     <link rel="stylesheet" href="./assets/vendor/bulma.min.css" />
+    <link rel="stylesheet" href="./assets/vendor/cssanimation.min.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
     <script defer src="./assets/vendor/alpinejs.min.js"></script>
     <script defer src="./assets/vendor/fontawesome.min.js"></script>
@@ -18,7 +19,7 @@
         <aside class="column is-3">
           <figure class="image is-flex is-justify-content-center">
             <img
-              class="is-max-width-256 is-rounded is-zoomable has-shadow"
+              class="is-max-width-256 is-rounded is-zoomable has-shadow cssanimation ca__fx-fadeInLeft ca__u-delay750"
               src="./assets/img/davidsantana06.png"
             />
           </figure>
@@ -26,9 +27,9 @@
 
         <div class="column">
           <main x-data="{ name, summary, platforms } = main">
-            <h1 class="title is-4 mb-3" x-text="name"></h1>
-            <p class="mb-3" x-html="summary"></p>
-            <div class="is-flex is-align-items-center is-gap-2">
+            <h1 class="title is-4 mb-3 cssanimation ca__fx-fadeInRight ca__u-delay250" x-text="name"></h1>
+            <p class="mb-3 cssanimation ca__fx-fadeInRight ca__u-delay500" x-html="summary"></p>
+            <div class="is-flex is-align-items-center is-gap-2 cssanimation ca__fx-fadeInBottom ca__u-delay1000">
               <template x-for="(platform, index) in platforms">
                 <a
                   class="icon-text"
@@ -52,7 +53,10 @@
       x-data="innerSections = [experienceSection, formationSection, projectSection]"
       x-for="(section, index) in innerSections"
     >
-      <section class="hero is-fullheight" :class="isEven(index) && 'is-dark'">
+      <section
+        class="hero is-fullheight"
+        :class="{ 'is-dark': isEven(index), 'cssanimation ca__fx-fadeInBottom ca__u-delay1250': index === 0 }"
+      >
         <div
           class="hero-body is-align-items-start is-flex-direction-column is-justify-content-center"
         >

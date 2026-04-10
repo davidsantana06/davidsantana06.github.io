@@ -44,3 +44,23 @@ ul {
 .is-zoomable:hover {
   transform: scale(1.05);
 }
+
+.ca__u-delay250 {
+  animation-delay: 250ms;
+}
+
+.ca__u-delay500 {
+  animation-delay: 500ms;
+}
+
+.ca__u-delay750 {
+  animation-delay: 750ms;
+}
+
+.ca__u-delay1000 {
+  animation-delay: 1000ms;
+}
+
+.ca__u-delay1250 {
+  animation-delay: 1250ms;
+}
