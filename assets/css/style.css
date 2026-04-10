@@ -37,14 +37,6 @@ ul {
   }
 }
 
-.is-zoomable {
-  transition: transform 0.2s ease !important;
-}
-
-.is-zoomable:hover {
-  transform: scale(1.05);
-}
-
 .ca__u-delay250 {
   animation-delay: 250ms;
 }
