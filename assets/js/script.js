@@ -60,6 +60,12 @@ const formationSection = {
       organization: "Instituto Federal da Bahia (IFBA)",
       startDate: "Mar. de 2026",
       endDate: "Presente",
+    },
+    {
+      title: "Bacharelado em Sistemas de Informação",
+      organization: "Instituto Federal da Bahia (IFBA)",
+      startDate: "Mar. de 2021",
+      endDate: "Nov. de 2025",
       bullets: [
         "Algoritmos, Estrutura de Dados, Engenharia de Software e Análise de Sistemas.",
         "Qualidade de Software, UX/UI, Desenvolvimento Web e Desenvolvimento Mobile.",
@@ -67,12 +73,6 @@ const formationSection = {
         "Scrum, Kanban e Business Intelligence.",
         "Governança de TI, Segurança da Informação e Administração de Redes.",
       ],
-    },
-    {
-      title: "Bacharelado em Sistemas de Informação",
-      organization: "Instituto Federal da Bahia (IFBA)",
-      startDate: "Mar. de 2021",
-      endDate: "Nov. de 2025",
     },
   ],
 };
