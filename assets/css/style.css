@@ -8,6 +8,7 @@
 }
 
 html {
+  scroll-behavior: smooth;
   scroll-snap-type: y proximity;
   overflow-y: scroll;
 }
@@ -28,6 +29,18 @@ ul {
 .is-max-width-256 {
   width: 100%;
   max-width: 256px;
+}
+
+.is-bottom-0 {
+  bottom: 0;
+}
+
+.is-right-0 {
+  right: 0;
+}
+
+.is-z-index-1 {
+  z-index: 1;
 }
 
 @media (min-width: 769px) {
@@ -55,4 +68,8 @@ ul {
 
 .ca__u-delay1250 {
   animation-delay: 1250ms;
+}
+
+.ca__u-delay1750 {
+  animation-delay: 1750ms;
 }

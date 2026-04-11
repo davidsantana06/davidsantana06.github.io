@@ -1,194 +1,189 @@
 <!doctype html>
 
 <html lang="pt-br" data-theme="light">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>David Santana</title>
-    <link rel="icon" href="./assets/favicon.ico" />
-    <link rel="stylesheet" href="./assets/vendor/bulma.min.css" />
-    <link rel="stylesheet" href="./assets/vendor/cssanimation.min.css" />
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <script defer src="./assets/vendor/alpinejs.min.js"></script>
-    <script defer src="./assets/vendor/fontawesome.min.js"></script>
-  </head>
 
-  <body>
-    <div class="container px-5 py-6">
-      <div class="columns is-vcentered">
-        <aside class="column is-3">
-          <figure class="image is-flex is-justify-content-center">
-            <img
-              class="is-max-width-256 is-rounded has-shadow cssanimation ca__fx-fadeInLeft ca__u-delay750"
-              src="./assets/img/davidsantana06.png"
-            />
-          </figure>
-        </aside>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>David Santana</title>
+  <link rel="icon" href="./assets/favicon.ico" />
+  <link rel="stylesheet" href="./assets/vendor/bulma.min.css" />
+  <link rel="stylesheet" href="./assets/vendor/cssanimation.min.css" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <script defer src="./assets/vendor/alpinejs.min.js"></script>
+  <script defer src="./assets/vendor/fontawesome.min.js"></script>
+</head>
 
-        <div class="column">
-          <main x-data="{ name, summary, platforms } = main">
-            <h1 class="title is-4 mb-3 cssanimation ca__fx-fadeInRight ca__u-delay250" x-text="name"></h1>
-            <p class="mb-3 cssanimation ca__fx-fadeInRight ca__u-delay500" x-html="summary"></p>
-            <div class="is-flex is-align-items-center is-gap-2 cssanimation ca__fx-fadeInBottom ca__u-delay1000">
-              <template x-for="(platform, index) in platforms">
-                <a
-                  class="icon-text"
-                  :class="isEven(index) && 'has-text-primary'"
-                  :href="platform.url"
-                  target="_blank"
-                >
-                  <span class="icon">
-                    <i :class="platform.faIcon"></i>
-                  </span>
-                  <span x-text="platform.label"></span>
-                </a>
+<body>
+  <!-- home -->
+  <div id="home" class="container px-5 py-6">
+    <div class="columns is-vcentered">
+      <aside class="column is-3">
+        <figure class="image is-flex is-justify-content-center">
+          <img class="is-max-width-256 is-rounded has-shadow cssanimation ca__fx-fadeInLeft ca__u-delay750"
+            src="./assets/img/davidsantana06.png" />
+        </figure>
+      </aside>
+
+      <div class="column">
+        <main x-data="{ name, summary, platforms } = main">
+          <h1 class="title is-4 mb-3 cssanimation ca__fx-fadeInRight ca__u-delay250" x-text="name"></h1>
+          <p class="mb-3 cssanimation ca__fx-fadeInRight ca__u-delay500" x-html="summary"></p>
+          <div class="is-flex is-align-items-center is-gap-2 cssanimation ca__fx-fadeInBottom ca__u-delay1000">
+            <template x-for="(platform, index) in platforms">
+              <a class="icon-text" :class="isEven(index) && 'has-text-primary'" :href="platform.url" target="_blank">
+                <span class="icon">
+                  <i :class="platform.faIcon"></i>
+                </span>
+                <span x-text="platform.label"></span>
+              </a>
+            </template>
+          </div>
+        </main>
+      </div>
+    </div>
+  </div>
+  <!-- # -->
+
+  <!-- inner sections -->
+  <template
+    x-data="innerSections = [experienceSection, formationSection, projectSection]"
+    x-for="(section, index) in innerSections"
+  >
+    <section
+      :id="`section-${index}`"
+      class="hero is-fullheight"
+      :class="{ 'is-dark': isEven(index), 'cssanimation ca__fx-fadeInBottom ca__u-delay1250': index === 0 }"
+    >
+      <div class="hero-body is-align-items-start is-flex-direction-column is-justify-content-center">
+        <h3 class="title is-5 mb-0" x-text="section.title"></h3>
+
+        <template x-for="entry in section.entries">
+          <div class="mt-5">
+            <h4 class="title is-6" x-text="entry.title"></h4>
+
+            <h5 class="subtitle is-7 mb-0">
+              <template x-if="entry.organization">
+                <b x-text="`${entry.organization} &#8226;`"></b>
               </template>
-            </div>
-          </main>
+
+              <span x-text="`${entry.startDate} &rarr; ${entry.endDate}`"></span>
+            </h5>
+
+            <template x-if="entry.reference">
+              <a class="icon-text has-text-primary mt-1" :href="entry.reference.url" target="_blank">
+                <span x-text="entry.reference.label"></span>
+                <span class="icon">
+                  <i class="fas fa-arrow-up-right-from-square"></i>
+                </span>
+              </a>
+            </template>
+
+            <template x-if="entry.bullets">
+              <ul class="pl-5 is-flex is-flex-direction-column is-gap-1 mt-2">
+                <template x-for="bullet in entry.bullets">
+                  <li x-text="bullet"></li>
+                </template>
+              </ul>
+            </template>
+          </div>
+        </template>
+      </div>
+    </section>
+  </template>
+  <!-- # -->
+
+  <!-- contact -->
+  <section id="contact" class="hero is-fullheight">
+    <div class="hero-body is-flex-direction-column is-justify-content-center">
+      <h3 class="title is-5">Fale comigo</h3>
+
+      <h4 class="subtitle is-7">
+        Preencha os campos e clique em <b>Enviar</b>
+      </h4>
+
+      <form class="is-max-width-256 is-max-width-384-tablet" action="https://jkorpela.fi/cgi-bin/echo.cgi"
+        method="post">
+        <div class="field">
+          <label class="label" for="name">
+            <b class="has-text-weight-bold">Nome</b>
+          </label>
+          <input id="name" class="input" name="name" type="text" minlength="1" maxlength="50" required />
+        </div>
+        <div class="field">
+          <label class="label" for="email">
+            <b class="has-text-weight-bold">E-mail</b>
+          </label>
+          <input id="email" class="input" name="email" type="email" minlength="1" maxlength="255" required />
+        </div>
+        <div class="field">
+          <label class="label" for="subject">
+            <b class="has-text-weight-bold">Assunto</b>
+          </label>
+          <input id="subject" class="input" name="subject" type="text" minlength="1" maxlength="50" required />
+        </div>
+        <div class="field mb-5">
+          <label class="label" for="message">
+            <b class="has-text-weight-bold">Mensagem</b>
+          </label>
+          <div class="control">
+            <textarea id="message" class="textarea" name="messsage" minlength="1" maxlength="250" required></textarea>
+          </div>
+        </div>
+
+        <div>
+          <div class="control mb-3">
+            <button class="button is-link is-fullwidth" type="submit">
+              Enviar
+            </button>
+          </div>
+          <div class="control">
+            <button class="button is-link is-light is-fullwidth" type="reset">
+              Limpar
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+  <!-- # -->
+
+  <!-- actions -->
+  <div
+    id="actions"
+    class="is-position-fixed is-right-0 is-bottom-0 mr-5 mb-5"
+    x-data="{ formalResumeUrl: FORMAL_RESUME_URL }"
+  >
+    <div class="dropdown is-up is-right is-hoverable cssanimation ca__fx-bounceInBottom ca__u-delay1750">
+      <div class="dropdown-trigger">
+        <button class="button">
+          <span>
+            Ações
+          </span>
+          <span class="icon is-small">
+            <i class="fas fa-angle-up"></i>
+          </span>
+        </button>
+      </div>
+
+      <div class="dropdown-menu">
+        <div class="dropdown-content">
+          <a class="dropdown-item is-unselectable" href="#home">
+            <i class="fas fa-arrow-up mr-1"></i>
+            Ir para o topo
+          </a>
+          <hr class="dropdown-divider" />
+          <a class="dropdown-item is-unselectable" :href="formalResumeUrl" target="_blank">
+            <i class="fas fa-arrow-up-right-from-square mr-1"></i>
+            Acessar currículo formal
+          </a>
         </div>
       </div>
     </div>
+  </div>
+  <!-- # -->
 
-    <template
-      x-data="innerSections = [experienceSection, formationSection, projectSection]"
-      x-for="(section, index) in innerSections"
-    >
-      <section
-        class="hero is-fullheight"
-        :class="{ 'is-dark': isEven(index), 'cssanimation ca__fx-fadeInBottom ca__u-delay1250': index === 0 }"
-      >
-        <div
-          class="hero-body is-align-items-start is-flex-direction-column is-justify-content-center"
-        >
-          <h3 class="title is-5 mb-0" x-text="section.title"></h3>
+  <script src="./assets/js/script.js"></script>
+</body>
 
-          <template x-for="entry in section.entries">
-            <div class="mt-5">
-              <h4 class="title is-6" x-text="entry.title"></h4>
-
-              <h5 class="subtitle is-7 mb-0">
-                <template x-if="entry.organization">
-                  <b x-text="`${entry.organization} &#8226;`"></b>
-                </template>
-
-                <span
-                  x-text="`${entry.startDate} &rarr; ${entry.endDate}`"
-                ></span>
-              </h5>
-
-              <template x-if="entry.reference">
-                <a
-                  class="icon-text has-text-primary mt-1"
-                  :href="entry.reference.url"
-                  target="_blank"
-                >
-                  <span x-text="entry.reference.label"></span>
-                  <span class="icon">
-                    <i class="fas fa-arrow-up-right-from-square"></i>
-                  </span>
-                </a>
-              </template>
-
-              <template x-if="entry.bullets">
-                <ul class="pl-5 is-flex is-flex-direction-column is-gap-1 mt-2">
-                  <template x-for="bullet in entry.bullets">
-                    <li x-text="bullet"></li>
-                  </template>
-                </ul>
-              </template>
-            </div>
-          </template>
-        </div>
-      </section>
-    </template>
-
-    <section class="hero is-fullheight">
-      <div class="hero-body is-flex-direction-column is-justify-content-center">
-        <h3 class="title is-5">Fale comigo</h3>
-
-        <h4 class="subtitle is-7">
-          Preencha os campos e clique em <b>Enviar</b>
-        </h4>
-
-        <form
-          class="is-max-width-256 is-max-width-384-tablet"
-          action="https://jkorpela.fi/cgi-bin/echo.cgi"
-          method="post"
-        >
-          <div class="field">
-            <label class="label" for="name">
-              <b class="has-text-weight-bold">Nome</b>
-            </label>
-            <input
-              id="name"
-              class="input"
-              name="name"
-              type="text"
-              minlength="1"
-              maxlength="50"
-              required
-            />
-          </div>
-          <div class="field">
-            <label class="label" for="email">
-              <b class="has-text-weight-bold">E-mail</b>
-            </label>
-            <input
-              id="email"
-              class="input"
-              name="email"
-              type="email"
-              minlength="1"
-              maxlength="255"
-              required
-            />
-          </div>
-          <div class="field">
-            <label class="label" for="subject">
-              <b class="has-text-weight-bold">Assunto</b>
-            </label>
-            <input
-              id="subject"
-              class="input"
-              name="subject"
-              type="text"
-              minlength="1"
-              maxlength="50"
-              required
-            />
-          </div>
-          <div class="field mb-5">
-            <label class="label" for="message">
-              <b class="has-text-weight-bold">Mensagem</b>
-            </label>
-            <div class="control">
-              <textarea
-                id="message"
-                class="textarea"
-                name="messsage"
-                minlength="1"
-                maxlength="250"
-                required
-              ></textarea>
-            </div>
-          </div>
-
-          <div>
-            <div class="control mb-3">
-              <button class="button is-link is-fullwidth" type="submit">
-                Enviar
-              </button>
-            </div>
-            <div class="control">
-              <button class="button is-link is-light is-fullwidth" type="reset">
-                Limpar
-              </button>
-            </div>
-          </div>
-        </form>
-      </div>
-    </section>
-
-    <script src="./assets/js/script.js"></script>
-  </body>
 </html>

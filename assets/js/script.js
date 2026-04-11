@@ -1,3 +1,5 @@
+const FORMAL_RESUME_URL = "https://drive.google.com/file/d/1jgGLD0Xsc_6BROEKWf13MTI_zWiQDSav";
+
 const isEven = (index) => index % 2 == 0;
 
 const main = {
