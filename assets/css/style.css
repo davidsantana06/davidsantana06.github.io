@@ -31,6 +31,13 @@ ul {
   max-width: 256px;
 }
 
+@media (min-width: 769px) {
+  .is-max-width-384-tablet {
+    width: 100%;
+    max-width: 384px;
+  }
+}
+
 .is-bottom-0 {
   bottom: 0;
 }
@@ -41,13 +48,6 @@ ul {
 
 .is-z-index-1 {
   z-index: 1;
-}
-
-@media (min-width: 769px) {
-  .is-max-width-384-tablet {
-    width: 100%;
-    max-width: 384px;
-  }
 }
 
 .ca__u-delay250 {

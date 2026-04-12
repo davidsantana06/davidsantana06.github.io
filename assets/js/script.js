@@ -1,4 +1,5 @@
-const FORMAL_RESUME_URL = "https://drive.google.com/file/d/1jgGLD0Xsc_6BROEKWf13MTI_zWiQDSav";
+const FORMAL_RESUME_URL =
+  "https://drive.google.com/file/d/1jgGLD0Xsc_6BROEKWf13MTI_zWiQDSav";
 
 const isEven = (index) => index % 2 == 0;
 
@@ -21,32 +22,32 @@ const main = {
 };
 
 const experienceSection = {
-  title: "Experiências profissionais",
+  title: "Principais experiências",
   entries: [
     {
       title: "Desenvolvedor full stack",
       organization: "SENAI CIMATEC",
-      startDate: "Jun. de 2024",
+      startDate: "Jul. de 2025",
       endDate: "Presente",
+      bullets: [
+        "Elaborei uma aplicação CLI em Java para atuar como middleware entre microsserviços, integrando-a a uma interface desktop multiplataforma desenvolvida em Angular e Electron via comunicação entre processos (IPC), centralizando a interação de 10 serviços distintos e abstraindo a complexidade do ecossistema.",
+        "Estruturei um serviço de métricas em Java para monitorar smart contracts implantados em redes blockchain compatíveis com EVM, mapeando e armazenando de forma estruturada em MongoDB o layout dos contratos e o histórico de execução de funções, além de expor os dados para consumo via Remote Procedure Call (gRPC).",
+        "Configurei e implantei um nó InterPlanetary File System (IPFS) para armazenamento descentralizado, viabilizando o upload, a leitura e a entrega ágil de arquivos para diferentes clientes e usuários da rede.",
+        "Orquestrei a conteinerização de 21 repositórios utilizando Docker e Nginx, integrando as etapas de CI/CD e centralizando o acesso aos recursos da infraestrutura via proxy reverso em um DNS proprietário.",
+        "Para consolidar a base de conhecimento de todos os componentes descritos anteriormente, documentei a solução utilizando Docusaurus integrado ao agente Ask AI, detalhando processos de implantação e especificações de APIs para permitir a consulta interativa por modelos de linguagem — como o OpenAI GPT (substituível conforme demanda).",
+      ],
+    },
+    {
+      title: "Desenvolvedor full stack",
+      organization: "SENAI CIMATEC",
+      startDate: "Jun. de 2024",
+      endDate: "Jun. de 2025",
       bullets: [
         "Desenvolvi o backend de uma plataforma de telemedicina nacional com NestJS e Prisma ORM, organizando módulos em arquitetura de camadas, implementando controle de acesso por roles (RBAC) e entregando uma API REST segura, escalável e de fácil manutenção.",
         "Com base nesse servidor, construí um painel administrativo com Next.js e React a partir de protótipos no Figma, permitindo gerenciar pacientes, profissionais de saúde, contratos empresariais e outros registros essenciais para o ecossistema.",
         "Integrei um sistema de videoconferência open source, Jitsi Meet, em aplicações frontend com React, permitindo que usuários em diferentes regiões do Brasil realizem chamadas de vídeo seguras e privadas.",
         "Elaborei o subsistema de relatórios de uma plataforma de controle de ponto com NestJS, Puppeteer e Bulma, integrando PostgreSQL e MongoDB, permitindo consultas estatísticas por vínculos empregatícios e critérios de busca avançados.",
         "Implementei uma suíte de testes automatizados com Jest, cobrindo cerca de 80% da base de código existente e garantindo conformidade com os critérios de qualidade definidos no SonarQube.",
-        "Atualmente trabalho com tecnologias blockchain, focando no desenvolvimento de smart contracts e aplicações descentralizadas (dApps).",
-      ],
-    },
-    {
-      title: "Desenvolvedor full stack",
-      organization: "Prefeitura de Vitória da Conquista",
-      startDate: "Fev. de 2023",
-      endDate: "Fev. de 2024",
-      bullets: [
-        "Construí uma aplicação desktop com Flask e Pandas para automatizar a geração de registros personalizados com nome e dieta de recém-nascidos, produzindo registros padronizados e reduzindo significativamente a intervenção manual.",
-        "Liderei a implementação e configuração do NovoSGA, sistema open source de gerenciamento de atendimentos, em uma unidade de saúde, garantindo operação plena desde a inauguração e aprimorando a eficiência na emissão de senhas e organização das filas de atendimento.",
-        "Criei um robô RPA em Python para validar cadastros de novos pacientes via API externa, habilitando o processo de login e definindo níveis de acesso automaticamente em larga escala.",
-        "Projetei, documentei e implementei uma aplicação web monolítica para criação de formulários online a partir de planilhas Excel, utilizando Flask, Jinja e Bootstrap, substituindo o processo manual em papel por coleta digital estruturada de dados em secretarias públicas.",
       ],
     },
   ],
@@ -78,7 +79,7 @@ const formationSection = {
 };
 
 const projectSection = {
-  title: "Projetos",
+  title: "Projetos em destaque",
   entries: [
     {
       title: "OrdersApp",
