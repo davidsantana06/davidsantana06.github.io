@@ -59,10 +59,10 @@
     </div>
     <!-- # -->
 
-    <!-- inner sections -->
+    <!-- sections -->
     <template
-      x-data="innerSections = [experienceSection, formationSection, projectSection]"
-      x-for="(section, index) in innerSections"
+      x-data="sections = [experienceSection, formationSection, projectSection]"
+      x-for="(section, index) in sections"
     >
       <section
         :id="`section-${index}`"
@@ -113,95 +113,6 @@
         </div>
       </section>
     </template>
-    <!-- # -->
-
-    <!-- contact -->
-    <section id="contact" class="hero is-fullheight">
-      <div class="hero-body is-flex-direction-column is-justify-content-center">
-        <h3 class="title is-5">Fale comigo</h3>
-
-        <h4 class="subtitle is-7">
-          Preencha os campos e clique em <b>Enviar</b>
-        </h4>
-
-        <form
-          class="is-max-width-256 is-max-width-384-tablet"
-          action="https://jkorpela.fi/cgi-bin/echo.cgi"
-          method="post"
-        >
-          <div class="field">
-            <label class="label" for="name">
-              <b class="has-text-weight-bold">Nome</b>
-            </label>
-            <input
-              id="name"
-              class="input"
-              name="name"
-              type="text"
-              minlength="1"
-              maxlength="50"
-              required
-            />
-          </div>
-          <div class="field">
-            <label class="label" for="email">
-              <b class="has-text-weight-bold">E-mail</b>
-            </label>
-            <input
-              id="email"
-              class="input"
-              name="email"
-              type="email"
-              minlength="1"
-              maxlength="255"
-              required
-            />
-          </div>
-          <div class="field">
-            <label class="label" for="subject">
-              <b class="has-text-weight-bold">Assunto</b>
-            </label>
-            <input
-              id="subject"
-              class="input"
-              name="subject"
-              type="text"
-              minlength="1"
-              maxlength="50"
-              required
-            />
-          </div>
-          <div class="field mb-5">
-            <label class="label" for="message">
-              <b class="has-text-weight-bold">Mensagem</b>
-            </label>
-            <div class="control">
-              <textarea
-                id="message"
-                class="textarea"
-                name="messsage"
-                minlength="1"
-                maxlength="250"
-                required
-              ></textarea>
-            </div>
-          </div>
-
-          <div>
-            <div class="control mb-3">
-              <button class="button is-link is-fullwidth" type="submit">
-                Enviar
-              </button>
-            </div>
-            <div class="control">
-              <button class="button is-link is-light is-fullwidth" type="reset">
-                Limpar
-              </button>
-            </div>
-          </div>
-        </form>
-      </div>
-    </section>
     <!-- # -->
 
     <!-- actions -->
