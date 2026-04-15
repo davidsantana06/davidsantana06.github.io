@@ -18,7 +18,8 @@ ul {
 }
 
 .container,
-.hero {
+.hero,
+.footer {
   scroll-snap-align: start;
 }
 
