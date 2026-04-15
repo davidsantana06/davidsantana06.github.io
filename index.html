@@ -67,8 +67,12 @@
     >
       <section
         :id="`section-${index}`"
-        class="hero is-fullheight"
-        :class="{ 'is-dark': isEven(index), 'cssanimation ca__fx-fadeInBottom ca__u-delay1250': index === 0 }"
+        class="hero is-fullheight cssanimation"
+        :class="{
+          'is-dark': isEven(index),
+          'ca__fx-fadeInBottom ca__u-delay1250': index === 0,
+          'ca__fx-fadeIn ca__u-delay2000': index >= 1
+        }"
       >
         <div
           class="hero-body is-align-items-start is-flex-direction-column is-justify-content-center"
@@ -117,10 +121,13 @@
     <!-- # -->
 
     <!-- footer -->
-    <footer class="footer pb-6 pt-6">
+    <footer class="footer pb-6 pt-6 cssanimation ca__fx-fadeIn ca__u-delay2000">
       <div class="content has-text-centered">
         <figure class="image is-128x128 is-inline-block">
-          <img class="is-rounded has-shadow" src="./assets/img/goku-about-to-teleport.gif" alt="Despedida" />
+          <img
+            class="is-rounded has-shadow"
+            src="./assets/img/goku-about-to-teleport.gif"
+          />
         </figure>
       </div>
     </footer>
