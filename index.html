@@ -37,7 +37,7 @@
               x-html="summary"
             ></p>
             <div
-              class="is-flex is-align-items-center is-gap-2 cssanimation ca__fx-fadeInBottom ca__u-delay1000"
+              class="is-flex is-align-items-center is-gap-3 cssanimation ca__fx-fadeInBottom ca__u-delay1000"
             >
               <template x-for="(platform, index) in platforms">
                 <a
@@ -45,6 +45,7 @@
                   :class="isEven(index) && 'has-text-primary'"
                   :href="platform.url"
                   target="_blank"
+                  :title="`Acessar perfil no ${platform.label}`"
                 >
                   <span class="icon">
                     <i :class="platform.faIcon"></i>
