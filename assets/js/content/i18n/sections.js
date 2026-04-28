@@ -1,58 +1,3 @@
-const FORMAL_RESUME_URL =
-  "https://drive.google.com/file/d/1jgGLD0Xsc_6BROEKWf13MTI_zWiQDSav";
-
-const isEven = (index) => index % 2 == 0;
-
-const language = navigator.language.toLowerCase().includes("pt")
-  ? "pt-BR"
-  : "en";
-
-const messages = {
-  "pt-BR": {
-    home: {
-      summary:
-        "<b>Desenvolvedor full stack</b> e <b>bacharel em Sistemas de Informação</b>, com " +
-        "mais de <b>3 anos de atuação</b> em soluções web. Possuo forte domínio em " +
-        "backend e bancos de dados (SQL e NoSQL), além de experiência em frontend, " +
-        "automação, qualidade de software (QA) e cloud computing.",
-      openPlatformProfile: "Acessar perfil no {platformLabel}",
-    },
-    actions: {
-      label: "Ações",
-      backToTop: "Ir para o topo",
-      openResume: "Acessar currículo formal",
-    },
-  },
-  en: {
-    home: {
-      summary:
-        "<b>Full stack developer</b> and <b>Bachelor in Information Systems</b>, with " +
-        "over <b>3 years of experience</b> building web solutions. Strong expertise in " +
-        "backend development and databases (SQL and NoSQL), along with experience in frontend, " +
-        "automation, software quality (QA), and cloud computing.",
-      openPlatformProfile: "View profile on {platformLabel}",
-    },
-    actions: {
-      label: "Actions",
-      backToTop: "Back to top",
-      openResume: "View formal resume",
-    },
-  },
-};
-
-const platforms = [
-  {
-    faIcon: "fab fa-linkedin",
-    label: "LinkedIn",
-    url: "https://linkedin.com/in/davidsantana06/",
-  },
-  {
-    faIcon: "fab fa-github",
-    label: "GitHub",
-    url: "https://github.com/davidsantana06",
-  },
-];
-
 const sections = {
   "pt-BR": [
     {
@@ -111,6 +56,7 @@ const sections = {
         },
       ],
     },
+
     {
       title: "Formação acadêmica",
       entries: [
@@ -135,6 +81,7 @@ const sections = {
         },
       ],
     },
+
     {
       title: "Projetos em destaque",
       entries: [
@@ -197,6 +144,7 @@ const sections = {
       ],
     },
   ],
+
   en: [
     {
       title: "Key Experience",
@@ -241,6 +189,7 @@ const sections = {
         },
       ],
     },
+
     {
       title: "Education",
       entries: [
@@ -265,6 +214,7 @@ const sections = {
         },
       ],
     },
+
     {
       title: "Featured Projects",
       entries: [
@@ -315,9 +265,5 @@ const sections = {
       ],
     },
   ],
-}[language];
-
-document.addEventListener("alpine-i18n:ready", () => {
-  window.AlpineI18n.create(language, messages);
-  document.documentElement.setAttribute("lang", language);
-});
+};
+export default sections;

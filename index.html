@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="./assets/vendor/cssanimation.min.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
 
-    <script defer src="./assets/js/script.js"></script>
+    <script defer src="./assets/js/main.js" type="module"></script>
     <script defer src="./assets/vendor/alpinejs-i18n.min.js"></script>
     <script defer src="./assets/vendor/alpinejs.min.js"></script>
     <script defer src="./assets/vendor/fontawesome.min.js"></script>
@@ -20,7 +20,7 @@
 
   <body>
     <!-- home -->
-    <div id="home" class="container px-5 py-6" x-data>
+    <div id="home" class="container px-5 py-6" x-data="getPlatforms()">
       <div class="columns is-vcentered">
         <aside class="column is-3">
           <figure class="image is-flex is-justify-content-center">
@@ -67,7 +67,7 @@
     <!-- # -->
 
     <!-- sections -->
-    <template x-data x-for="(section, index) in sections">
+    <template x-data="getSections()" x-for="(section, index) in sections">
       <section
         :id="`section-${index}`"
         class="hero is-fullheight cssanimation"
@@ -140,7 +140,7 @@
     <div
       id="actions"
       class="is-position-fixed is-right-0 is-bottom-0 mr-5 mb-5"
-      x-data
+      x-data="getFormalResumeUrl()"
     >
       <div
         class="dropdown is-up is-right is-hoverable cssanimation ca__fx-bounceInBottom ca__u-delay1750"
@@ -163,7 +163,7 @@
             <hr class="dropdown-divider" />
             <a
               class="dropdown-item is-unselectable"
-              :href="FORMAL_RESUME_URL"
+              :href="formalResumeUrl"
               target="_blank"
             >
               <i class="fas fa-arrow-up-right-from-square mr-1"></i>
