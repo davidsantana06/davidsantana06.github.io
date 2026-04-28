@@ -4,18 +4,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>David Santana</title>
     <link rel="icon" href="./assets/favicon.ico" />
+
     <link rel="stylesheet" href="./assets/vendor/bulma.min.css" />
     <link rel="stylesheet" href="./assets/vendor/cssanimation.min.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <script defer src="./assets/js/script.js"></script>
+    <script defer src="./assets/vendor/alpinejs-i18n.min.js"></script>
     <script defer src="./assets/vendor/alpinejs.min.js"></script>
     <script defer src="./assets/vendor/fontawesome.min.js"></script>
   </head>
 
   <body>
     <!-- home -->
-    <div id="home" class="container px-5 py-6">
+    <div id="home" class="container px-5 py-6" x-data>
       <div class="columns is-vcentered">
         <aside class="column is-3">
           <figure class="image is-flex is-justify-content-center">
@@ -27,14 +32,15 @@
         </aside>
 
         <div class="column">
-          <main x-data="{ name, summary, platforms } = main">
+          <main>
             <h1
               class="title is-4 mb-3 cssanimation ca__fx-fadeInRight ca__u-delay250"
-              x-text="name"
-            ></h1>
+            >
+              David Santana
+            </h1>
             <p
               class="mb-3 cssanimation ca__fx-fadeInRight ca__u-delay500"
-              x-html="summary"
+              x-html="$t('home.summary')"
             ></p>
             <div
               class="is-flex is-align-items-center is-gap-3 cssanimation ca__fx-fadeInBottom ca__u-delay1000"
@@ -45,7 +51,7 @@
                   :class="isEven(index) && 'has-text-primary'"
                   :href="platform.url"
                   target="_blank"
-                  :title="`Acessar perfil no ${platform.label}`"
+                  :title="$t('home.openPlatformProfile', { platformLabel: platform.label })"
                 >
                   <span class="icon">
                     <i :class="platform.faIcon"></i>
@@ -61,10 +67,7 @@
     <!-- # -->
 
     <!-- sections -->
-    <template
-      x-data="sections = [experienceSection, formationSection, projectSection]"
-      x-for="(section, index) in sections"
-    >
+    <template x-data x-for="(section, index) in sections">
       <section
         :id="`section-${index}`"
         class="hero is-fullheight cssanimation"
@@ -137,14 +140,14 @@
     <div
       id="actions"
       class="is-position-fixed is-right-0 is-bottom-0 mr-5 mb-5"
-      x-data="{ formalResumeUrl: FORMAL_RESUME_URL }"
+      x-data
     >
       <div
         class="dropdown is-up is-right is-hoverable cssanimation ca__fx-bounceInBottom ca__u-delay1750"
       >
         <div class="dropdown-trigger">
           <button class="button">
-            <span> Ações </span>
+            <span x-text="$t('actions.label')"></span>
             <span class="icon is-small">
               <i class="fas fa-angle-up"></i>
             </span>
@@ -155,23 +158,21 @@
           <div class="dropdown-content">
             <a class="dropdown-item is-unselectable" href="#home">
               <i class="fas fa-arrow-up mr-1"></i>
-              Ir para o topo
+              <span x-text="$t('actions.backToTop')"></span>
             </a>
             <hr class="dropdown-divider" />
             <a
               class="dropdown-item is-unselectable"
-              :href="formalResumeUrl"
+              :href="FORMAL_RESUME_URL"
               target="_blank"
             >
               <i class="fas fa-arrow-up-right-from-square mr-1"></i>
-              Acessar currículo formal
+              <span x-text="$t('actions.openResume')"></span>
             </a>
           </div>
         </div>
       </div>
     </div>
     <!-- # -->
-
-    <script src="./assets/js/script.js"></script>
   </body>
 </html>
