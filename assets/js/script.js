@@ -3,11 +3,9 @@ const FORMAL_RESUME_URL =
 
 const isEven = (index) => index % 2 == 0;
 
-// const language = navigator.language?.toLowerCase().includes("pt")
-//   ? "pt-BR"
-//  : "en";
-
-const language = "pt-BR";
+const language = navigator.language.toLowerCase().includes("pt")
+  ? "pt-BR"
+  : "en";
 
 const messages = {
   "pt-BR": {
@@ -23,6 +21,21 @@ const messages = {
       label: "Ações",
       backToTop: "Ir para o topo",
       openResume: "Acessar currículo formal",
+    },
+  },
+  en: {
+    home: {
+      summary:
+        "<b>Full stack developer</b> and <b>Bachelor in Information Systems</b>, with " +
+        "over <b>3 years of experience</b> building web solutions. Strong expertise in " +
+        "backend development and databases (SQL and NoSQL), along with experience in frontend, " +
+        "automation, software quality (QA), and cloud computing.",
+      openPlatformProfile: "View profile on {platformLabel}",
+    },
+    actions: {
+      label: "Actions",
+      backToTop: "Back to top",
+      openResume: "View formal resume",
     },
   },
 };
@@ -178,6 +191,124 @@ const sections = {
           ],
           reference: {
             label: "Acessar vídeo (YouTube)",
+            url: "https://youtu.be/htxKAjm1iLc",
+          },
+        },
+      ],
+    },
+  ],
+  en: [
+    {
+      title: "Key Experience",
+      entries: [
+        {
+          title: "Full Stack Developer",
+          organization: "SENAI CIMATEC",
+          startDate: "Jul 2025",
+          endDate: "Present",
+          bullets: [
+            "Designed a Java-based CLI application acting as middleware between microservices, " +
+              "integrated with a cross-platform desktop interface built with Angular and Electron " +
+              "via IPC, centralizing interactions across 10 services and abstracting ecosystem complexity.",
+            "Built a Java metrics service to monitor smart contracts deployed on EVM-compatible " +
+              "blockchains, structuring and storing contract layouts and execution history in MongoDB, " +
+              "and exposing data via gRPC.",
+            "Configured and deployed an InterPlanetary File System (IPFS) node for decentralized storage, " +
+              "enabling efficient file upload, retrieval, and delivery.",
+            "Orchestrated containerization of 21 repositories using Docker and Nginx, integrating CI/CD " +
+              "pipelines and centralizing infrastructure access via reverse proxy and custom DNS.",
+            "Documented the full solution using Docusaurus integrated with Ask AI, detailing deployment " +
+              "processes and API specifications for interactive querying via language models such as OpenAI GPT.",
+          ],
+        },
+        {
+          title: "Full Stack Developer",
+          organization: "SENAI CIMATEC",
+          startDate: "Jun 2024",
+          endDate: "Jun 2025",
+          bullets: [
+            "Developed the backend of a national telemedicine platform using NestJS and Prisma ORM, " +
+              "applying layered architecture, implementing RBAC, and delivering a secure and scalable REST API.",
+            "Built an administrative dashboard with Next.js and React based on Figma prototypes, " +
+              "enabling management of patients, healthcare professionals, and contracts.",
+            "Integrated the open-source video conferencing system Jitsi Meet into React applications, " +
+              "allowing secure video calls across different regions.",
+            "Designed a reporting subsystem using NestJS, Puppeteer, and Bulma, integrating PostgreSQL " +
+              "and MongoDB for advanced analytics queries.",
+            "Implemented an automated test suite with Jest, achieving ~80% coverage and ensuring " +
+              "compliance with SonarQube quality standards.",
+          ],
+        },
+      ],
+    },
+    {
+      title: "Education",
+      entries: [
+        {
+          title: "Postgraduate Degree in Web Development",
+          organization: "Federal Institute of Bahia (IFBA)",
+          startDate: "Mar 2026",
+          endDate: "Present",
+        },
+        {
+          title: "Bachelor’s Degree in Information Systems",
+          organization: "Federal Institute of Bahia (IFBA)",
+          startDate: "Mar 2021",
+          endDate: "Nov 2025",
+          bullets: [
+            "Algorithms, Data Structures, Software Engineering, and Systems Analysis.",
+            "Software Quality, UX/UI, Web Development, and Mobile Development.",
+            "Databases, Distributed Systems, and Artificial Intelligence.",
+            "Scrum, Kanban, and Business Intelligence.",
+            "IT Governance, Information Security, and Network Administration.",
+          ],
+        },
+      ],
+    },
+    {
+      title: "Featured Projects",
+      entries: [
+        {
+          title: "OrdersApp",
+          startDate: "Jan 2026",
+          endDate: "Feb 2026",
+          bullets: [
+            "Full stack application for managing product orders across multiple domains.",
+            "Centralizes item registration with brand, model, and year, supporting both API (.NET) " +
+              "and Angular-based web interface interactions.",
+            "Layered architecture with component-based frontend (MVVM) and backend aligned with MVC " +
+              "and Service Layer, with performance optimizations using database triggers and stored procedures.",
+          ],
+          reference: {
+            label: "View repository (GitHub)",
+            url: "https://github.com/davidsantana06/orders-app",
+          },
+        },
+        {
+          title: "Resuming",
+          startDate: "Feb 2025",
+          endDate: "Nov 2025",
+          bullets: [
+            "Platform focused on creating and sharing resumes, tailored for developers.",
+            "Addresses lack of clarity in portfolios by enabling structured academic and professional tracking via API.",
+            "Highlights profile visibility with a dedicated, clean URL (resuming.dev), ideal for sharing.",
+          ],
+          reference: {
+            label: "View repository (GitHub)",
+            url: "https://github.com/davidsantana06/resuming",
+          },
+        },
+        {
+          title: "pEATL Deployment (Browser-based RPG)",
+          startDate: "Oct 2012",
+          endDate: "Nov 2012",
+          bullets: [
+            "First hands-on tech project, deploying a private server based on a modified version of AdventureQuest Worlds at age 10.",
+            "Customized assets and interface, gaining practical experience with web structure and file organization.",
+            "Performed local deployment and enabled external access via VPN (Hamachi), introducing networking concepts.",
+          ],
+          reference: {
+            label: "Watch video (YouTube)",
             url: "https://youtu.be/htxKAjm1iLc",
           },
         },
