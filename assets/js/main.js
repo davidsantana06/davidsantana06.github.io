@@ -13,7 +13,5 @@ document.addEventListener("alpine:init", () => {
   window.isEven = (number) => number % 2 === 0;
   window.Alpine.data("getPlatforms", () => ({ platforms }));
   window.Alpine.data("getSections", () => ({ sections: sections[locale] }));
-  window.Alpine.data("getFormalResumeUrl", () => ({
-    formalResumeUrl: FORMAL_RESUME_URL,
-  }));
+  window.Alpine.data("getFormalResumeUrl", () => ({ FORMAL_RESUME_URL }));
 });
