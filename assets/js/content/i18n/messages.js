@@ -10,8 +10,11 @@ const messages = {
     },
     actions: {
       label: "Ações",
-      backToTop: "Ir para o topo",
-      openResume: "Acessar currículo formal",
+      backToTop: { label: "Ir para o topo" },
+      openResume: {
+        label: "Acessar currículo formal",
+        url: "https://drive.google.com/file/d/1VhsdaUM_GnPlmUoutedDSU3Ty3Ik-XVD/view",
+      },
     },
   },
 
@@ -26,8 +29,11 @@ const messages = {
     },
     actions: {
       label: "Actions",
-      backToTop: "Back to top",
-      openResume: "View formal resume",
+      backToTop: { label: "Back to top" },
+      openResume: {
+        label: "View formal resume",
+        url: "https://drive.google.com/file/d/1JZhEcmEhD7k2ua8CUezuCk-6uoFLoLLX/view",
+      },
     },
   },
 };
