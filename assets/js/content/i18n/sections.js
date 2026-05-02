@@ -57,12 +57,12 @@ const experienceSection = {
   },
 
   en: {
-    title: "Key Experience",
+    title: "Key experience",
     entries: [
       {
-        title: "Full Stack Developer",
+        title: "Full stack developer",
         organization: "SENAI CIMATEC",
-        startDate: "Jul 2025",
+        startDate: "Jul. 2025",
         endDate: "Present",
         bullets: [
           "Designed a Java-based CLI application acting as middleware between microservices, " +
@@ -80,10 +80,10 @@ const experienceSection = {
         ],
       },
       {
-        title: "Full Stack Developer",
+        title: "Full stack developer",
         organization: "SENAI CIMATEC",
-        startDate: "Jun 2024",
-        endDate: "Jun 2025",
+        startDate: "Jun. 2024",
+        endDate: "Jun. 2025",
         bullets: [
           "Developed the backend of a national telemedicine platform using NestJS and Prisma ORM, " +
             "applying layered architecture, implementing RBAC, and delivering a secure and scalable REST API.",
@@ -133,14 +133,14 @@ const educationSection = {
       {
         title: "Postgraduate Degree in Web Development",
         organization: "Federal Institute of Bahia (IFBA)",
-        startDate: "Mar 2026",
+        startDate: "Mar. 2026",
         endDate: "Present",
       },
       {
         title: "Bachelor’s Degree in Information Systems",
         organization: "Federal Institute of Bahia (IFBA)",
-        startDate: "Mar 2021",
-        endDate: "Nov 2025",
+        startDate: "Mar. 2021",
+        endDate: "Nov. 2025",
         bullets: [
           "Algorithms, Data Structures, Software Engineering, and Systems Analysis.",
           "Software Quality, UX/UI, Web Development, and Mobile Development.",
@@ -217,12 +217,12 @@ const projectSection = {
   },
 
   en: {
-    title: "Featured Projects",
+    title: "Featured projects",
     entries: [
       {
         title: "OrdersApp",
-        startDate: "Jan 2026",
-        endDate: "Feb 2026",
+        startDate: "Jan. 2026",
+        endDate: "Feb. 2026",
         bullets: [
           "Full stack application for managing product orders across multiple domains.",
           "Centralizes item registration with brand, model, and year, supporting both API (.NET) " +
@@ -237,8 +237,8 @@ const projectSection = {
       },
       {
         title: "Resuming",
-        startDate: "Feb 2025",
-        endDate: "Nov 2025",
+        startDate: "Feb. 2025",
+        endDate: "Nov. 2025",
         bullets: [
           "Platform focused on creating and sharing resumes, tailored for developers.",
           "Addresses lack of clarity in portfolios by enabling structured academic and professional tracking via API.",
@@ -250,9 +250,9 @@ const projectSection = {
         },
       },
       {
-        title: "pEATL Deployment (Browser-based RPG)",
-        startDate: "Oct 2012",
-        endDate: "Nov 2012",
+        title: "pEATL deployment (browser-based RPG)",
+        startDate: "Oct. 2012",
+        endDate: "Nov. 2012",
         bullets: [
           "First hands-on tech project, deploying a private server based on a modified version of AdventureQuest Worlds at age 10.",
           "Customized assets and interface, gaining practical experience with web structure and file organization.",

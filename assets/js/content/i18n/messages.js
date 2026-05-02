@@ -14,10 +14,11 @@ const messages = {
       openResume: "Acessar currículo formal",
     },
   },
+
   en: {
     home: {
       summary:
-        "<b>Full stack developer</b> and <b>Bachelor in Information Systems</b>, with " +
+        "<b>Full stack developer</b> and <b>bachelor in Information Systems</b>, with " +
         "over <b>3 years of experience</b> building web solutions. Strong expertise in " +
         "backend development and databases (SQL and NoSQL), along with experience in frontend, " +
         "automation, software quality (QA), and cloud computing.",
