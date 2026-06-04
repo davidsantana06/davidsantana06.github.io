@@ -8,6 +8,7 @@
 }
 
 html {
+  scroll-behavior: smooth;
   scroll-snap-type: y proximity;
   overflow-y: scroll;
 }
@@ -17,12 +18,13 @@ ul {
 }
 
 .container,
-.hero {
+.hero,
+.footer {
   scroll-snap-align: start;
 }
 
 .hero.is-fullheight {
-  min-height: 100svh !important;
+  min-height: 100vh !important;
 }
 
 .is-max-width-256 {
@@ -35,4 +37,44 @@ ul {
     width: 100%;
     max-width: 384px;
   }
+}
+
+.is-bottom-0 {
+  bottom: 0;
+}
+
+.is-right-0 {
+  right: 0;
+}
+
+.is-z-index-1 {
+  z-index: 1;
+}
+
+.ca__u-delay250 {
+  animation-delay: 250ms;
+}
+
+.ca__u-delay500 {
+  animation-delay: 500ms;
+}
+
+.ca__u-delay750 {
+  animation-delay: 750ms;
+}
+
+.ca__u-delay1000 {
+  animation-delay: 1000ms;
+}
+
+.ca__u-delay1250 {
+  animation-delay: 1250ms;
+}
+
+.ca__u-delay1750 {
+  animation-delay: 1750ms;
+}
+
+.ca__u-delay2000 {
+  animation-delay: 2000ms;
 }
