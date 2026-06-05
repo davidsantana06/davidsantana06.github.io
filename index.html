@@ -47,8 +47,8 @@
             >
               <template x-for="(platform, index) in platforms">
                 <a
-                  class="icon-text"
-                  :class="isEven(index) && 'has-text-primary'"
+                  class="icon-text platform-link"
+                  :style="`--platform-color: ${platform.color};`"
                   :href="platform.url"
                   target="_blank"
                   :title="$t('home.openPlatformProfile', { platformLabel: platform.label })"

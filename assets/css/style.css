@@ -27,6 +27,15 @@ ul {
   min-height: 100vh !important;
 }
 
+.platform-link {
+  color: var(--platform-color);
+  transition: opacity 0.2s ease;
+}
+
+.platform-link:hover {
+  opacity: 0.7;
+}
+
 .is-max-width-256 {
   width: 100%;
   max-width: 256px;
