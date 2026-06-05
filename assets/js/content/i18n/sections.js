@@ -162,14 +162,17 @@ const projectSection = {
         startDate: "Jan. de 2026",
         endDate: "Fev. de 2026",
         bullets: [
-          "Aplicação full stack voltada à gestão de pedidos de produtos em diferentes segmentos.",
-          "A solução centraliza o registro de itens com marca, modelo e ano, permitindo " +
-            "requisições tanto via API, desenvolvida em .NET, quanto por interface web " +
-            "construída em Angular.",
-          "Sua arquitetura em camadas organiza as responsabilidades de forma clara, adotando " +
-            "Component-Based Architecture no frontend, alinhada ao MVVM, e um backend próximo " +
-            "ao MVC com Service Layer, com operações críticas otimizadas por meio de triggers e " +
-            "stored procedures implementadas diretamente no banco de dados.",
+          "Aplicação full stack para gestão de pedidos de produtos em diferentes segmentos, " +
+            "centralizando o registro e a consulta de itens identificados por marca, modelo e ano.",
+          "O sistema combina uma API em C# com .NET e uma interface web em Angular, sobre " +
+            "SQL Server. O backend segue arquitetura em camadas e o frontend, organização " +
+            "modular por componentes. As operações críticas são otimizadas no próprio banco, " +
+            "com trigger de totalização automática e stored procedure de busca filtrada; " +
+            "testes unitários (xUnit) no pipeline de build e o empacotamento em Docker " +
+            "garantem a confiabilidade da entrega.",
+          "Seu ponto alto é o sistema de filtros em cascata (Marca → Modelo → Ano) com " +
+            "carregamento dinâmico: cada escolha recalcula as opções seguintes, estreitando " +
+            "a busca até o pedido desejado.",
         ],
         reference: {
           label: "Acessar repositório (GitHub)",
@@ -181,12 +184,16 @@ const projectSection = {
         startDate: "Fev. de 2025",
         endDate: "Nov. de 2025",
         bullets: [
-          "Plataforma focada na criação e compartilhamento de currículos, feita sob " +
-            "medida para desenvolvedores.",
-          "O projeto resolve a falta de objetividade em portfólios, permitindo gerir " +
-            "trajetórias acadêmicas e profissionais via API.",
-          "O destaque é a visibilidade do perfil: uma página web exclusiva com URL " +
-            "curta e elegante (resuming.dev), ideal para divulgação.",
+          "Plataforma de criação e compartilhamento de currículos, pensada para trazer " +
+            "objetividade aos portfólios.",
+          "Aplicação monolítica em NestJS, com Prisma ORM e autenticação via JWT, expõe " +
+            "uma API REST documentada com Swagger e tem a interface estilizada com Bulma. " +
+            "Permite gerir informações básicas, formação acadêmica e experiência " +
+            "profissional, além de exportar o currículo em PDF, renderizado no servidor " +
+            "por meio do Puppeteer.",
+          "Pensado por e para desenvolvedores, o Resuming trata o currículo como uma " +
+            "página web própria e sempre atualizável, em vez de um arquivo estático, e " +
+            "oferece exportação em PDF para quando o formato impresso é necessário.",
         ],
         reference: {
           label: "Acessar repositório (GitHub)",
@@ -198,14 +205,14 @@ const projectSection = {
         startDate: "Out. de 2012",
         endDate: "Nov. de 2012",
         bullets: [
-          "Meu primeiro projeto prático em tecnologia, no qual implantei um servidor " +
-            "privado a partir de uma versão modificada do AdventureQuest Worlds, marcando " +
-            "meu contato inicial com código-fonte e customização de aplicações — " +
-            "desenvolvido aos 10 anos de idade.",
-          "Adaptei a base existente com inclusão de novos itens e ajustes na interface " +
-            "principal, explorando na prática manipulação de assets, estrutura web e " +
+          "Aos 10 anos de idade, dei meus primeiros passos práticos em tecnologia " +
+            "implantando um servidor privado a partir de uma versão modificada do " +
+            "AdventureQuest Worlds — meu primeiro contato com código-fonte e a " +
+            "customização de aplicações.",
+          "Adaptei a base existente com a inclusão de novos itens e ajustes na interface " +
+            "principal, explorando na prática a manipulação de assets, a estrutura web e a " +
             "organização de arquivos.",
-          "Executei o deploy localmente, viabilizando o acesso externo via VPN (LogMeIn " +
+          "Executei o deploy localmente e viabilizei o acesso externo via VPN (LogMeIn " +
             "Hamachi), o que me introduziu a noções de rede, distribuição e disponibilidade.",
         ],
         reference: {
@@ -224,11 +231,17 @@ const projectSection = {
         startDate: "Jan. 2026",
         endDate: "Feb. 2026",
         bullets: [
-          "Full stack application for managing product orders across multiple domains.",
-          "Centralizes item registration with brand, model, and year, supporting both API (.NET) " +
-            "and Angular-based web interface interactions.",
-          "Layered architecture with component-based frontend (MVVM) and backend aligned with MVC " +
-            "and Service Layer, with performance optimizations using database triggers and stored procedures.",
+          "Full stack application for managing product orders across different segments, " +
+            "centralizing the registration and lookup of items identified by brand, model, and year.",
+          "The system combines a C# API on .NET with an Angular web interface, over SQL Server. " +
+            "The backend follows a layered architecture and the frontend a modular, " +
+            "component-based organization. Critical operations are optimized in the database " +
+            "itself, with an automatic totalization trigger and a filtered-search stored " +
+            "procedure; unit tests (xUnit) in the build pipeline and Docker packaging ensure " +
+            "a reliable delivery.",
+          "Its strongest point is the cascading filter system (Brand → Model → Year) with " +
+            "dynamic loading: each choice recalculates the next set of options, narrowing the " +
+            "search down to the order at hand.",
         ],
         reference: {
           label: "View repository (GitHub)",
@@ -240,9 +253,13 @@ const projectSection = {
         startDate: "Feb. 2025",
         endDate: "Nov. 2025",
         bullets: [
-          "Platform focused on creating and sharing resumes, tailored for developers.",
-          "Addresses lack of clarity in portfolios by enabling structured academic and professional tracking via API.",
-          "Highlights profile visibility with a dedicated, clean URL (resuming.dev), ideal for sharing.",
+          "A platform for creating and sharing résumés, designed to bring objectivity to portfolios.",
+          "A monolithic NestJS application, with Prisma ORM and JWT authentication, it exposes " +
+            "a REST API documented with Swagger and has its interface styled with Bulma. It lets " +
+            "users manage basic information, education, and work experience, and exports résumés " +
+            "to PDF rendered server-side via Puppeteer.",
+          "Built by and for developers, Resuming treats the résumé as its own, always-updatable " +
+            "web page rather than a static file, and offers PDF export for when a print format is needed.",
         ],
         reference: {
           label: "View repository (GitHub)",
@@ -254,9 +271,13 @@ const projectSection = {
         startDate: "Oct. 2012",
         endDate: "Nov. 2012",
         bullets: [
-          "First hands-on tech project, deploying a private server based on a modified version of AdventureQuest Worlds at age 10.",
-          "Customized assets and interface, gaining practical experience with web structure and file organization.",
-          "Performed local deployment and enabled external access via VPN (Hamachi), introducing networking concepts.",
+          "At the age of 10, I took my first practical steps in tech by deploying a private " +
+            "server from a modified version of AdventureQuest Worlds — my first contact with " +
+            "source code and application customization.",
+          "I adapted the existing codebase by adding new items and adjusting the main interface, " +
+            "gaining practical experience with asset manipulation, web structure, and file organization.",
+          "I performed the deployment locally and enabled external access via VPN (LogMeIn " +
+            "Hamachi), which introduced me to concepts of networking, distribution, and availability.",
         ],
         reference: {
           label: "Watch video (YouTube)",
