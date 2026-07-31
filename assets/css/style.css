@@ -61,23 +61,12 @@ ul {
   max-width: 256px;
 }
 
-@media (min-width: 769px) {
-  .is-max-width-384-tablet {
-    width: 100%;
-    max-width: 384px;
-  }
-}
-
 .is-bottom-0 {
   bottom: 0;
 }
 
 .is-right-0 {
   right: 0;
-}
-
-.is-z-index-1 {
-  z-index: 1;
 }
 
 .ca__u-delay90 {
