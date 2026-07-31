@@ -1,18 +1,18 @@
 export const platforms = [
   {
-    faIcon: "fab fa-linkedin",
+    icon: "linkedin",
     label: "LinkedIn",
     url: "https://linkedin.com/in/davidsantana06/",
     color: "#0A66C2",
   },
   {
-    faIcon: "fab fa-github",
+    icon: "github",
     label: "GitHub",
     url: "https://github.com/davidsantana06",
     color: "#181717",
   },
   {
-    faIcon: "fab fa-youtube",
+    icon: "youtube",
     label: "YouTube",
     url: "https://youtube.com/@davidsantana06",
     color: "#FF0000",

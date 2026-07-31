@@ -36,6 +36,13 @@ ul {
   opacity: 0.7;
 }
 
+.icon-svg {
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+  vertical-align: -0.125em;
+}
+
 .is-max-width-256 {
   width: 100%;
   max-width: 256px;
