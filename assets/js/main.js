@@ -13,3 +13,7 @@ document.addEventListener("alpine:init", () => {
   window.Alpine.data("getPlatforms", () => ({ platforms }));
   window.Alpine.data("getSections", () => ({ sections: sections[locale] }));
 });
+
+document.addEventListener("alpine:initialized", () => {
+  document.documentElement.classList.add("is-ready");
+});

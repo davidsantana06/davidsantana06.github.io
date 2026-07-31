@@ -8,12 +8,17 @@
     <title>David Santana</title>
     <link rel="icon" href="./assets/favicon.ico" />
 
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+
     <link rel="stylesheet" href="./assets/vendor/bulma.min.css" />
     <link rel="stylesheet" href="./assets/vendor/cssanimation.min.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
 
     <script src="./assets/js/main.js" type="module"></script>
     <script defer src="./assets/vendor/alpinejs-i18n.min.js"></script>
+    <script defer src="./assets/vendor/alpinejs-intersect.min.js"></script>
     <script defer src="./assets/vendor/alpinejs.min.js"></script>
   </head>
 
@@ -59,7 +64,7 @@
         <aside class="column is-3">
           <figure class="image is-flex is-justify-content-center">
             <img
-              class="is-max-width-256 is-rounded cssanimation ca__fx-fadeInLeft ca__u-delay750"
+              class="is-max-width-256 is-rounded cssanimation ca__fx-fadeInLeft ca__u-delay180"
               src="./assets/img/davidsantana06.jpeg"
             />
           </figure>
@@ -67,17 +72,15 @@
 
         <div class="column">
           <main>
-            <h1
-              class="title is-4 mb-3 cssanimation ca__fx-fadeInRight ca__u-delay250"
-            >
+            <h1 class="title is-4 mb-3 cssanimation ca__fx-fadeInRight">
               David Santana
             </h1>
             <p
-              class="mb-3 cssanimation ca__fx-fadeInRight ca__u-delay500"
+              class="mb-3 cssanimation ca__fx-fadeInRight ca__u-delay90"
               x-html="$t('home.summary')"
             ></p>
             <div
-              class="is-flex is-align-items-center is-gap-3 cssanimation ca__fx-fadeInBottom ca__u-delay1000"
+              class="is-flex is-align-items-center is-gap-3 cssanimation ca__fx-fadeInBottom ca__u-delay270"
             >
               <template x-for="(platform, index) in platforms">
                 <a
@@ -106,20 +109,25 @@
     <template x-data="getSections()" x-for="(section, index) in sections">
       <section
         :id="`section-${index}`"
-        class="hero is-fullheight cssanimation"
-        :class="{
-          'is-dark': isEven(index),
-          'ca__fx-fadeInBottom ca__u-delay1250': index === 0,
-          'ca__fx-fadeIn ca__u-delay2000': index >= 1
-        }"
+        class="hero is-fullheight"
+        data-reveal
+        x-data="{ shown: false }"
+        x-intersect.once="shown = true"
+        :class="{ 'is-dark': isEven(index), 'is-revealed': shown }"
       >
         <div
           class="hero-body is-align-items-start is-flex-direction-column is-justify-content-center"
         >
-          <h3 class="title is-5 mb-0" x-text="section.title"></h3>
+          <h3
+            class="title is-5 mb-0 cssanimation ca__fx-fadeIn"
+            x-text="section.title"
+          ></h3>
 
-          <template x-for="entry in section.entries">
-            <div class="mt-5">
+          <template x-for="(entry, entryIndex) in section.entries">
+            <div
+              class="mt-5 cssanimation ca__fx-fadeIn"
+              :style="`animation-delay: ${(entryIndex + 1) * 90}ms`"
+            >
               <h4 class="title is-6" x-text="entry.title"></h4>
 
               <h5 class="subtitle is-7 mb-0">
@@ -162,7 +170,13 @@
     <!-- # -->
 
     <!-- footer -->
-    <footer class="footer pb-6 pt-6 cssanimation ca__fx-fadeIn ca__u-delay2000">
+    <footer
+      class="footer pb-6 pt-6 cssanimation ca__fx-fadeIn"
+      data-reveal
+      x-data="{ shown: false }"
+      x-intersect.once.margin.-120px="shown = true"
+      :class="{ 'is-revealed': shown }"
+    >
       <div class="content has-text-centered">
         <figure class="image is-128x128 is-inline-block">
           <img
@@ -181,7 +195,7 @@
       x-data
     >
       <div
-        class="dropdown is-up is-right is-hoverable cssanimation ca__fx-bounceInBottom ca__u-delay1750"
+        class="dropdown is-up is-right is-hoverable cssanimation ca__fx-bounceInBottom ca__u-delay360"
       >
         <div class="dropdown-trigger">
           <button class="button">
