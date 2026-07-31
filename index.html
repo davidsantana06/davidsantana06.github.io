@@ -16,6 +16,11 @@
     <link rel="stylesheet" href="./assets/vendor/cssanimation.min.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
 
+    <link rel="modulepreload" href="./assets/js/config/locale.js" />
+    <link rel="modulepreload" href="./assets/js/content/platforms.js" />
+    <link rel="modulepreload" href="./assets/js/content/i18n/messages.js" />
+    <link rel="modulepreload" href="./assets/js/content/i18n/sections.js" />
+
     <script src="./assets/js/main.js" type="module"></script>
     <script defer src="./assets/vendor/alpinejs-i18n.min.js"></script>
     <script defer src="./assets/vendor/alpinejs-intersect.min.js"></script>
@@ -66,6 +71,11 @@
             <img
               class="is-max-width-256 is-rounded cssanimation ca__fx-fadeInLeft ca__u-delay180"
               src="./assets/img/davidsantana06.jpeg"
+              alt="David Santana"
+              width="256"
+              height="256"
+              fetchpriority="high"
+              decoding="async"
             />
           </figure>
         </aside>
@@ -181,7 +191,10 @@
         <figure class="image is-128x128 is-inline-block">
           <img
             class="is-rounded has-shadow"
-            src="./assets/img/goku-about-to-teleport.gif"
+            src="./assets/img/goku-about-to-teleport.webp"
+            alt="Goku prestes a se teletransportar"
+            loading="lazy"
+            decoding="async"
           />
         </figure>
       </div>
