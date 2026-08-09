@@ -85,6 +85,38 @@ ul {
   animation-delay: 360ms;
 }
 
+#home .ca__fx-fadeInRight {
+  animation-name: fadeInRightShort;
+}
+
+#home .ca__fx-fadeInLeft {
+  animation-name: fadeInLeftShort;
+}
+
+@keyframes fadeInRightShort {
+  from {
+    opacity: 0;
+    transform: translateX(1rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInLeftShort {
+  from {
+    opacity: 0;
+    transform: translateX(-1rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
