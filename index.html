@@ -205,7 +205,7 @@
     <div
       id="actions"
       class="is-position-fixed is-right-0 is-bottom-0 mr-5 mb-5"
-      x-data
+      x-data="getPlatforms()"
     >
       <div
         class="dropdown is-up is-right is-hoverable cssanimation ca__fx-fadeInBottom ca__u-delay360"
@@ -224,20 +224,24 @@
         <div class="dropdown-menu">
           <div class="dropdown-content">
             <a class="dropdown-item is-unselectable" href="#home">
-              <svg class="icon-svg"><use href="#icon-arrow-up"></use></svg>
+              <svg class="icon-svg mr-2"><use href="#icon-arrow-up"></use></svg>
               <span x-text="$t('actions.backToTop.label')"></span>
             </a>
             <hr class="dropdown-divider" />
-            <a
-              class="dropdown-item is-unselectable"
-              :href="$t('actions.openResume.url')"
-              target="_blank"
-            >
-              <svg class="icon-svg">
-                <use href="#icon-arrow-up-right-from-square"></use>
-              </svg>
-              <span x-text="$t('actions.openResume.label')"></span>
-            </a>
+            <template x-for="platform in platforms">
+              <a
+                class="dropdown-item is-unselectable"
+                :href="platform.url"
+                target="_blank"
+              >
+                <svg class="icon-svg mr-2">
+                  <use :href="`#icon-${platform.icon}`"></use>
+                </svg>
+                <span
+                  x-text="$t('actions.openPlatform.label', { platformLabel: platform.label })"
+                ></span>
+              </a>
+            </template>
           </div>
         </div>
       </div>

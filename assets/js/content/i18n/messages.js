@@ -11,10 +11,7 @@ const messages = {
     actions: {
       label: "Ações",
       backToTop: { label: "Ir para o topo" },
-      openResume: {
-        label: "Acessar currículo formal",
-        url: "https://drive.google.com/file/d/1VhsdaUM_GnPlmUoutedDSU3Ty3Ik-XVD/view",
-      },
+      openPlatform: { label: "Acessar {platformLabel}" },
     },
   },
 
@@ -30,10 +27,7 @@ const messages = {
     actions: {
       label: "Actions",
       backToTop: { label: "Back to top" },
-      openResume: {
-        label: "View formal resume",
-        url: "https://drive.google.com/file/d/1JZhEcmEhD7k2ua8CUezuCk-6uoFLoLLX/view",
-      },
+      openPlatform: { label: "Visit {platformLabel}" },
     },
   },
 };
