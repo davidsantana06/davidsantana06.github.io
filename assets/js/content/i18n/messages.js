@@ -3,7 +3,7 @@ const messages = {
     home: {
       summary:
         "<b>Desenvolvedor full stack</b> e <b>bacharel em Sistemas de Informação</b>, com " +
-        "mais de <b>3 anos de atuação</b> em soluções web. Possuo forte domínio em " +
+        "mais de <b>3 anos de atuação</b> em soluções web. Possuo forte domínio de " +
         "backend e bancos de dados (SQL e NoSQL), além de experiência em frontend, " +
         "automação, qualidade de software (QA) e cloud computing.",
       openPlatformProfile: "Acessar perfil no {platformLabel}",
@@ -18,10 +18,10 @@ const messages = {
   en: {
     home: {
       summary:
-        "<b>Full stack developer</b> and <b>bachelor in Information Systems</b>, with " +
-        "over <b>3 years of experience</b> building web solutions. Strong expertise in " +
-        "backend development and databases (SQL and NoSQL), along with experience in frontend, " +
-        "automation, software quality (QA), and cloud computing.",
+        "<b>Full-stack developer</b> with a <b>bachelor’s degree in Information Systems</b> " +
+        "and over <b>3 years of experience</b> building web solutions. Strong command of " +
+        "backend development and databases (SQL and NoSQL), along with hands-on work in " +
+        "frontend, automation, software quality (QA), and cloud computing.",
       openPlatformProfile: "View profile on {platformLabel}",
     },
     actions: {

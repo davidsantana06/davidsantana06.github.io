@@ -66,47 +66,59 @@ const experienceSection = {
     title: "Key experience",
     entries: [
       {
-        title: "Full stack developer",
+        title: "Full-stack developer",
         organization: "Tecgraf / PUC-Rio",
         startDate: "Sep. 2026",
         endDate: "Present",
       },
       {
-        title: "Full stack developer",
+        title: "Full-stack developer",
         organization: "SENAI CIMATEC",
         startDate: "Jul. 2025",
         endDate: "Aug. 2026",
         bullets: [
-          "Designed a Java-based CLI application acting as middleware between microservices, " +
-            "integrated with a cross-platform desktop interface built with Angular and Electron " +
-            "via IPC, centralizing interactions across 10 services and abstracting ecosystem complexity.",
-          "Built a Java metrics service to monitor smart contracts deployed on EVM-compatible " +
-            "blockchains, structuring and storing contract layouts and execution history in MongoDB, " +
-            "and exposing data via gRPC.",
-          "Configured and deployed an InterPlanetary File System (IPFS) node for decentralized storage, " +
-            "enabling efficient file upload, retrieval, and delivery.",
-          "Orchestrated containerization of 21 repositories using Docker and Nginx, integrating CI/CD " +
-            "pipelines and centralizing infrastructure access via reverse proxy and custom DNS.",
-          "Documented the full solution using Docusaurus integrated with Ask AI, detailing deployment " +
-            "processes and API specifications for interactive querying via language models such as OpenAI GPT.",
+          "Built a Java CLI application to act as middleware between microservices, " +
+            "integrating it with a cross-platform desktop interface developed in Angular and " +
+            "Electron through inter-process communication (IPC), centralizing the interaction " +
+            "of 10 distinct services and abstracting the complexity of the ecosystem.",
+          "Structured a Java metrics service to monitor smart contracts deployed on " +
+            "EVM-compatible blockchains, mapping and storing contract layouts and function " +
+            "execution history in MongoDB, and exposing the data for consumption via Remote " +
+            "Procedure Call (gRPC).",
+          "Configured and deployed an InterPlanetary File System (IPFS) node for " +
+            "decentralized storage, enabling fast upload, retrieval, and delivery of files to " +
+            "the different clients and users on the network.",
+          "Orchestrated the containerization of 21 repositories with Docker and Nginx, " +
+            "integrating CI/CD stages and centralizing access to infrastructure resources " +
+            "through a reverse proxy on a proprietary DNS.",
+          "To consolidate the knowledge base for all of the components above, documented the " +
+            "solution with Docusaurus integrated with the Ask AI agent, detailing deployment " +
+            "processes and API specifications so that language models — such as OpenAI GPT " +
+            "(swappable as needed) — can query it interactively.",
         ],
       },
       {
-        title: "Full stack developer",
+        title: "Full-stack developer",
         organization: "SENAI CIMATEC",
         startDate: "Jun. 2024",
         endDate: "Jun. 2025",
         bullets: [
-          "Developed the backend of a national telemedicine platform using NestJS and Prisma ORM, " +
-            "applying layered architecture, implementing RBAC, and delivering a secure and scalable REST API.",
-          "Built an administrative dashboard with Next.js and React based on Figma prototypes, " +
-            "enabling management of patients, healthcare professionals, and contracts.",
-          "Integrated the open-source video conferencing system Jitsi Meet into React applications, " +
-            "allowing secure video calls across different regions.",
-          "Designed a reporting subsystem using NestJS, Puppeteer, and Bulma, integrating PostgreSQL " +
-            "and MongoDB for advanced analytics queries.",
-          "Implemented an automated test suite with Jest, achieving ~80% coverage and ensuring " +
-            "compliance with SonarQube quality standards.",
+          "Developed the backend of a national telemedicine platform with NestJS and Prisma " +
+            "ORM, organizing modules in a layered architecture, implementing role-based " +
+            "access control (RBAC), and delivering a secure, scalable, and maintainable " +
+            "REST API.",
+          "On top of that server, created an administrative dashboard with Next.js and React " +
+            "from Figma prototypes, making it possible to manage patients, healthcare " +
+            "professionals, corporate contracts, and other records essential to the ecosystem.",
+          "Integrated Jitsi Meet, an open-source video conferencing system, into React " +
+            "frontend applications, allowing users in different regions of Brazil to hold " +
+            "secure, private video calls.",
+          "Developed the reporting subsystem of a time-and-attendance platform with NestJS, " +
+            "Puppeteer, and Bulma, integrating PostgreSQL and MongoDB to support statistical " +
+            "queries by employment relationship and advanced search criteria.",
+          "Implemented an automated test suite with Jest, covering roughly 80% of the " +
+            "existing codebase and ensuring compliance with the quality criteria defined in " +
+            "SonarQube.",
         ],
       },
     ],
@@ -118,7 +130,7 @@ const educationSection = {
     title: "Formação acadêmica",
     entries: [
       {
-        title: "Pós-Graduação Lato Senso em Desenvolvimento Web",
+        title: "Pós-Graduação Lato Sensu em Desenvolvimento Web",
         organization: "Instituto Federal da Bahia (IFBA)",
         startDate: "Mar. de 2026",
         endDate: "Presente",
@@ -143,13 +155,13 @@ const educationSection = {
     title: "Education",
     entries: [
       {
-        title: "Postgraduate Degree in Web Development",
+        title: "Postgraduate degree in Web Development",
         organization: "Federal Institute of Bahia (IFBA)",
         startDate: "Mar. 2026",
         endDate: "Present",
       },
       {
-        title: "Bachelor’s Degree in Information Systems",
+        title: "Bachelor’s degree in Information Systems",
         organization: "Federal Institute of Bahia (IFBA)",
         startDate: "Mar. 2021",
         endDate: "Nov. 2025",
@@ -305,13 +317,14 @@ const projectSection = {
         startDate: "Oct. 2012",
         endDate: "Nov. 2012",
         bullets: [
-          "At the age of 10, I took my first practical steps in tech by deploying a private " +
-            "server from a modified version of AdventureQuest Worlds — my first contact with " +
-            "source code and application customization.",
-          "I adapted the existing codebase by adding new items and adjusting the main interface, " +
-            "gaining practical experience with asset manipulation, web structure, and file organization.",
-          "I performed the deployment locally and enabled external access via VPN (LogMeIn " +
-            "Hamachi), which introduced me to concepts of networking, distribution, and availability.",
+          "At the age of 10, took my first practical steps in technology by deploying a " +
+            "private server from a modified version of AdventureQuest Worlds — my first " +
+            "contact with source code and application customization.",
+          "Adapted the existing codebase by adding new items and adjusting the main " +
+            "interface, gaining hands-on experience with asset manipulation, web structure, " +
+            "and file organization.",
+          "Deployed it locally and enabled external access over a VPN (LogMeIn Hamachi), " +
+            "which introduced me to notions of networking, distribution, and availability.",
         ],
         reference: {
           label: "Watch video (YouTube)",
