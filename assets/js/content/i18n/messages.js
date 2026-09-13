@@ -13,6 +13,9 @@ const messages = {
       backToTop: { label: "Ir para o topo" },
       openPlatform: { label: "Acessar {platformLabel}" },
     },
+    footer: {
+      imageAlt: "Goku prestes a se teletransportar",
+    },
   },
 
   en: {
@@ -28,6 +31,9 @@ const messages = {
       label: "Actions",
       backToTop: { label: "Back to top" },
       openPlatform: { label: "Visit {platformLabel}" },
+    },
+    footer: {
+      imageAlt: "Goku about to teleport",
     },
   },
 };
