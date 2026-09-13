@@ -170,46 +170,55 @@ const projectSection = {
     title: "Projetos em destaque",
     entries: [
       {
-        title: "OrdersApp",
-        startDate: "Jan. de 2026",
-        endDate: "Fev. de 2026",
+        title: "Unofficial Farma",
+        startDate: "Ago. de 2026",
+        endDate: "Set. de 2026",
         bullets: [
-          "Aplicação full stack para gestão de pedidos de produtos em diferentes segmentos, " +
-            "centralizando o registro e a consulta de itens identificados por marca, modelo e ano.",
-          "O sistema combina uma API em C# com .NET e uma interface web em Angular, sobre " +
-            "SQL Server. O backend segue arquitetura em camadas e o frontend, organização " +
-            "modular por componentes. As operações críticas são otimizadas no próprio banco, " +
-            "com trigger de totalização automática e stored procedure de busca filtrada; " +
-            "testes unitários (xUnit) no pipeline de build e o empacotamento em Docker " +
-            "garantem a confiabilidade da entrega.",
-          "Seu ponto alto é o sistema de filtros em cascata (Marca → Modelo → Ano) com " +
-            "carregamento dinâmico: cada escolha recalcula as opções seguintes, estreitando " +
-            "a busca até o pedido desejado.",
+          "Conjunto de serviços para gestão de um catálogo farmacêutico, com laboratórios, " +
+            "medicamentos e as avaliações que os clientes escrevem sobre eles, exposto a uma " +
+            "IA pelo protocolo MCP e acessível por um chat.",
+          "A base são três serviços REST em FastAPI, um por recurso, cada um no seu container " +
+            "e todos sobre o mesmo PostgreSQL, com CRUD completo, paginação e busca parcial. " +
+            "À frente deles ficam três servidores MCP, que traduzem a chamada de ferramenta " +
+            "em requisição HTTP e publicam apenas as operações de leitura, deixando o catálogo " +
+            "consultável, mas não alterável pela IA. O chat é um LibreChat com Gemini, que " +
+            "encontra os servidores MCP pela própria configuração, e tudo sobe por Docker Compose.",
+          "A stack fica transparente ao usuário, que pergunta quais remédios um laboratório " +
+            "fabrica ou o que andaram dizendo sobre um deles, enquanto o LLM escolhe sozinho " +
+            "a ferramenta que responde.",
         ],
         reference: {
           label: "Acessar repositório (GitHub)",
-          url: "https://github.com/davidsantana06/orders-app",
+          url: "https://github.com/davidsantana06/unofficial-farma",
         },
       },
       {
-        title: "Resuming",
-        startDate: "Fev. de 2025",
-        endDate: "Nov. de 2025",
+        title: "Availability Monitor",
+        startDate: "Maio de 2026",
+        endDate: "Jul. de 2026",
         bullets: [
-          "Plataforma de criação e compartilhamento de currículos, pensada para trazer " +
-            "objetividade aos portfólios.",
-          "Aplicação monolítica em NestJS, com Prisma ORM e autenticação via JWT, expõe " +
-            "uma API REST documentada com Swagger e tem a interface estilizada com Bulma. " +
-            "Permite gerir informações básicas, formação acadêmica e experiência " +
-            "profissional, além de exportar o currículo em PDF, renderizado no servidor " +
-            "por meio do Puppeteer.",
-          "Pensado por e para desenvolvedores, o Resuming trata o currículo como uma " +
-            "página web própria e sempre atualizável, em vez de um arquivo estático, e " +
-            "oferece exportação em PDF para quando o formato impresso é necessário.",
+          "Ferramenta de monitoramento de servidores dividida em duas aplicações: um motor " +
+            "de linha de comando que verifica a disponibilidade dos hosts e avisa por e-mail, " +
+            "e um painel web para montar os arquivos de configuração que ele consome.",
+          "O motor, Server Availability Monitor (SAM), é escrito em Python e separa DTOs, " +
+            "repositórios e serviços. Opera em loop, testando os servidores por conexão TCP " +
+            "em paralelo, comparando o resultado com o ciclo anterior e despachando e-mail " +
+            "por SMTP quando detecta queda, recuperação ou lembrete vencido de host ainda " +
+            "offline. Os logs têm rotação diária e a lógica pura é coberta por pytest.",
+          "O painel, Client Availability Monitor (CAM), é uma SPA em Angular 18 com " +
+            "TypeScript, sem backend, banco ou armazenamento local — o estado vive em " +
+            "memória, em stores RxJS organizados no padrão MVVM. Cada aba valida o que se " +
+            "digita, propaga a renomeação ou remoção de um servidor para a lista de ativos " +
+            "e exporta o arquivo pronto. Testes em Jasmine e publicação no GitHub Pages " +
+            "rodam via GitHub Actions a cada push na main.",
+          "As duas aplicações não conversam entre si, só pelos quatro arquivos de " +
+            "configuração: o painel escreve, o monitor relê do disco a cada ciclo, então " +
+            "incluir um servidor ou trocar um destinatário entra em vigor sem reiniciar a " +
+            "execução.",
         ],
         reference: {
-          label: "Acessar repositório (GitHub)",
-          url: "https://github.com/davidsantana06/resuming",
+          label: "Acessar vídeo (YouTube)",
+          url: "https://youtu.be/ndPGfHC1G3Q",
         },
       },
       {
@@ -239,43 +248,56 @@ const projectSection = {
     title: "Featured projects",
     entries: [
       {
-        title: "OrdersApp",
-        startDate: "Jan. 2026",
-        endDate: "Feb. 2026",
+        title: "Unofficial Farma",
+        startDate: "Aug. 2026",
+        endDate: "Sep. 2026",
         bullets: [
-          "Full stack application for managing product orders across different segments, " +
-            "centralizing the registration and lookup of items identified by brand, model, and year.",
-          "The system combines a C# API on .NET with an Angular web interface, over SQL Server. " +
-            "The backend follows a layered architecture and the frontend a modular, " +
-            "component-based organization. Critical operations are optimized in the database " +
-            "itself, with an automatic totalization trigger and a filtered-search stored " +
-            "procedure; unit tests (xUnit) in the build pipeline and Docker packaging ensure " +
-            "a reliable delivery.",
-          "Its strongest point is the cascading filter system (Brand → Model → Year) with " +
-            "dynamic loading: each choice recalculates the next set of options, narrowing the " +
-            "search down to the order at hand.",
+          "A set of services for managing a pharmaceutical catalog — laboratories, medicines, " +
+            "and the reviews customers write about them — exposed to an AI through the MCP " +
+            "protocol and reachable from a chat interface.",
+          "At its base are three FastAPI REST services, one per resource, each in its own " +
+            "container and all backed by the same PostgreSQL, with full CRUD, pagination, and " +
+            "partial search. In front of them sit three MCP servers, which translate a tool " +
+            "call into an HTTP request and publish read operations only, leaving the catalog " +
+            "queryable but not modifiable by the AI. The chat is LibreChat running Gemini, " +
+            "which discovers the MCP servers from its own configuration, and the whole stack " +
+            "comes up through Docker Compose.",
+          "The stack stays invisible to the user, who simply asks which medicines a laboratory " +
+            "makes or what people have been saying about one of them, while the LLM picks the " +
+            "tool that answers on its own.",
         ],
         reference: {
           label: "View repository (GitHub)",
-          url: "https://github.com/davidsantana06/orders-app",
+          url: "https://github.com/davidsantana06/unofficial-farma",
         },
       },
       {
-        title: "Resuming",
-        startDate: "Feb. 2025",
-        endDate: "Nov. 2025",
+        title: "Availability Monitor",
+        startDate: "May 2026",
+        endDate: "Jul. 2026",
         bullets: [
-          "A platform for creating and sharing résumés, designed to bring objectivity to portfolios.",
-          "A monolithic NestJS application, with Prisma ORM and JWT authentication, it exposes " +
-            "a REST API documented with Swagger and has its interface styled with Bulma. It lets " +
-            "users manage basic information, education, and work experience, and exports résumés " +
-            "to PDF rendered server-side via Puppeteer.",
-          "Built by and for developers, Resuming treats the résumé as its own, always-updatable " +
-            "web page rather than a static file, and offers PDF export for when a print format is needed.",
+          "A server monitoring tool split into two applications: a command-line engine that " +
+            "checks host availability and sends alerts by e-mail, and a web panel for " +
+            "assembling the configuration files it consumes.",
+          "The engine, Server Availability Monitor (SAM), is written in Python and separates " +
+            "DTOs, repositories, and services. It runs in a loop, probing servers over " +
+            "parallel TCP connections, comparing each result with the previous cycle, and " +
+            "dispatching e-mail over SMTP when it detects an outage, a recovery, or an " +
+            "overdue reminder for a host still offline. Logs rotate daily and the pure logic " +
+            "is covered by pytest.",
+          "The panel, Client Availability Monitor (CAM), is a TypeScript SPA in Angular 18 " +
+            "with no backend, database, or local storage — state lives in memory, in RxJS " +
+            "stores organized under the MVVM pattern. Each tab validates what is typed, " +
+            "propagates the renaming or removal of a server to the active list, and exports " +
+            "the finished file. Jasmine tests and deployment to GitHub Pages run through " +
+            "GitHub Actions on every push to main.",
+          "The two applications never talk to each other, only through the four configuration " +
+            "files: the panel writes them, the monitor re-reads them from disk each cycle, so " +
+            "adding a server or changing a recipient takes effect without restarting the run.",
         ],
         reference: {
-          label: "View repository (GitHub)",
-          url: "https://github.com/davidsantana06/resuming",
+          label: "Watch video (YouTube)",
+          url: "https://youtu.be/ndPGfHC1G3Q",
         },
       },
       {
