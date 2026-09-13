@@ -4,9 +4,15 @@ const experienceSection = {
     entries: [
       {
         title: "Desenvolvedor full stack",
+        organization: "Tecgraf / PUC-Rio",
+        startDate: "Set. de 2026",
+        endDate: "Presente",
+      },
+      {
+        title: "Desenvolvedor full stack",
         organization: "SENAI CIMATEC",
         startDate: "Jul. de 2025",
-        endDate: "Presente",
+        endDate: "Ago. de 2026",
         bullets: [
           "Elaborei uma aplicação CLI em Java para atuar como middleware entre microsserviços, " +
             "integrando-a a uma interface desktop multiplataforma desenvolvida em Angular e " +
@@ -61,9 +67,15 @@ const experienceSection = {
     entries: [
       {
         title: "Full stack developer",
+        organization: "Tecgraf / PUC-Rio",
+        startDate: "Sep. 2026",
+        endDate: "Present",
+      },
+      {
+        title: "Full stack developer",
         organization: "SENAI CIMATEC",
         startDate: "Jul. 2025",
-        endDate: "Present",
+        endDate: "Aug. 2026",
         bullets: [
           "Designed a Java-based CLI application acting as middleware between microservices, " +
             "integrated with a cross-platform desktop interface built with Angular and Electron " +
@@ -291,11 +303,7 @@ const projectSection = {
 const sections = Object.fromEntries(
   Object.keys(experienceSection).map((locale) => [
     locale,
-    [
-      experienceSection[locale],
-      educationSection[locale],
-      projectSection[locale],
-    ],
+    [experienceSection[locale], educationSection[locale], projectSection[locale]],
   ]),
 );
 export default sections;
