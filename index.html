@@ -87,7 +87,8 @@
             </h1>
             <p
               class="mb-3 cssanimation ca__fx-fadeInRight ca__u-delay90"
-              x-html="$t('home.summary')"
+              x-data="getYearsOfExperience()"
+              x-html="$t('home.summary', { yearsOfExperience })"
             ></p>
             <div
               class="is-flex is-align-items-center is-gap-3 cssanimation ca__fx-fadeInBottom ca__u-delay270"
