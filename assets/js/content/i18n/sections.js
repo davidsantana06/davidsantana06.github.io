@@ -4,7 +4,7 @@ const experienceSection = {
     entries: [
       {
         title: "Desenvolvedor full stack",
-        organization: "Tecgraf / PUC-Rio",
+        organization: "Instituto Tecgraf/PUC-Rio",
         startDate: "Set. de 2026",
         endDate: "Presente",
       },
@@ -67,7 +67,7 @@ const experienceSection = {
     entries: [
       {
         title: "Full-stack developer",
-        organization: "Tecgraf / PUC-Rio",
+        organization: "Tecgraf Institute/PUC-Rio",
         startDate: "Sep. 2026",
         endDate: "Present",
       },
