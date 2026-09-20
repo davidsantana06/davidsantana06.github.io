@@ -200,8 +200,8 @@ const projectSection = {
             "a ferramenta que responde.",
         ],
         reference: {
-          label: "Acessar repositório (GitHub)",
-          url: "https://github.com/davidsantana06/unofficial-farma",
+          label: "Acessar vídeo (YouTube)",
+          url: "https://youtu.be/rV1cxHIGGnk",
         },
       },
       {
@@ -279,8 +279,8 @@ const projectSection = {
             "tool that answers on its own.",
         ],
         reference: {
-          label: "View repository (GitHub)",
-          url: "https://github.com/davidsantana06/unofficial-farma",
+          label: "Watch video (YouTube)",
+          url: "https://youtu.be/rV1cxHIGGnk",
         },
       },
       {
