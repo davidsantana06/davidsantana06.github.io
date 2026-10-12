@@ -18,6 +18,7 @@
 
     <link rel="modulepreload" href="./assets/js/config/locale.js" />
     <link rel="modulepreload" href="./assets/js/content/platforms.js" />
+    <link rel="modulepreload" href="./assets/js/content/projects.js" />
     <link rel="modulepreload" href="./assets/js/content/i18n/messages.js" />
     <link rel="modulepreload" href="./assets/js/content/i18n/sections.js" />
 
@@ -53,11 +54,6 @@
       <symbol id="icon-arrow-up" viewBox="0 0 384 512">
         <path
           d="M214.6 9.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 109.3 160 480c0 17.7 14.3 32 32 32s32-14.3 32-32l0-370.7 105.4 105.4c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"
-        />
-      </symbol>
-      <symbol id="icon-arrow-up-right-from-square" viewBox="0 0 512 512">
-        <path
-          d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32l82.7 0-201.4 201.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3 448 192c0 17.7 14.3 32 32 32s32-14.3 32-32l0-160c0-17.7-14.3-32-32-32L320 0zM80 96C35.8 96 0 131.8 0 176L0 432c0 44.2 35.8 80 80 80l256 0c44.2 0 80-35.8 80-80l0-80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 80c0 8.8-7.2 16-16 16L80 448c-8.8 0-16-7.2-16-16l0-256c0-8.8 7.2-16 16-16l80 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L80 96z"
         />
       </symbol>
     </svg>
@@ -151,19 +147,32 @@
                 ></span>
               </h5>
 
-              <template x-if="entry.reference">
-                <a
-                  class="icon-text has-text-primary mt-1"
-                  :href="entry.reference.url"
-                  target="_blank"
-                >
-                  <span x-text="entry.reference.label"></span>
-                  <span class="icon">
-                    <svg class="icon-svg">
-                      <use href="#icon-arrow-up-right-from-square"></use>
-                    </svg>
-                  </span>
-                </a>
+              <template x-if="entry.video">
+                <div class="is-flex mt-2">
+                  <a
+                    class="is-relative has-radius-normal is-clipped project-link"
+                    :href="entry.video.url"
+                    target="_blank"
+                  >
+                    <img
+                      class="is-block"
+                      :src="entry.video.thumbnail"
+                      :alt="entry.title"
+                      width="256"
+                      height="144"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <div
+                      class="tag is-dark is-position-absolute is-bottom-0 is-right-0 m-2"
+                    >
+                      <svg class="icon-svg mr-2">
+                        <use href="#icon-youtube"></use>
+                      </svg>
+                      <span x-text="$t('sections.watchVideo')"></span>
+                    </div>
+                  </a>
+                </div>
               </template>
 
               <template x-if="entry.bullets">

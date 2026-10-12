@@ -8,6 +8,9 @@ const messages = {
         "frontend, automação, qualidade de software (QA) e cloud computing.",
       openPlatformProfile: "Acessar perfil no {platformLabel}",
     },
+    sections: {
+      watchVideo: "Assistir no YouTube",
+    },
     actions: {
       label: "Ações",
       backToTop: { label: "Ir para o topo" },
@@ -26,6 +29,9 @@ const messages = {
         "Strong command of backend development and databases (SQL and NoSQL), along with " +
         "hands-on work in frontend, automation, software quality (QA), and cloud computing.",
       openPlatformProfile: "View profile on {platformLabel}",
+    },
+    sections: {
+      watchVideo: "Watch on YouTube",
     },
     actions: {
       label: "Actions",

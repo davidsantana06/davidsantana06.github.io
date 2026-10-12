@@ -1,3 +1,9 @@
+import {
+  UNOFFICIAL_FARMA_VIDEO_URL,
+  AVAILABILITY_MONITOR_VIDEO_URL,
+  PEATL_IMPLANTATION_VIDEO_URL,
+} from "../projects.js";
+
 const experienceSection = {
   "pt-BR": {
     title: "Principais experiências",
@@ -185,72 +191,27 @@ const projectSection = {
         title: "Unofficial Farma",
         startDate: "Ago. de 2026",
         endDate: "Set. de 2026",
-        bullets: [
-          "Conjunto de serviços para gestão de um catálogo farmacêutico, com laboratórios, " +
-            "medicamentos e as avaliações que os clientes escrevem sobre eles, exposto a uma " +
-            "IA pelo protocolo MCP e acessível por um chat.",
-          "A base são três serviços REST em FastAPI, um por recurso, cada um no seu container " +
-            "e todos sobre o mesmo PostgreSQL, com CRUD completo, paginação e busca parcial. " +
-            "À frente deles ficam três servidores MCP, que traduzem a chamada de ferramenta " +
-            "em requisição HTTP e publicam apenas as operações de leitura, deixando o catálogo " +
-            "consultável, mas não alterável pela IA. O chat é um LibreChat com Gemini, que " +
-            "encontra os servidores MCP pela própria configuração, e tudo sobe por Docker Compose.",
-          "A stack fica transparente ao usuário, que pergunta quais remédios um laboratório " +
-            "fabrica ou o que andaram dizendo sobre um deles, enquanto o LLM escolhe sozinho " +
-            "a ferramenta que responde.",
-        ],
-        reference: {
-          label: "Acessar vídeo (YouTube)",
-          url: "https://youtu.be/rV1cxHIGGnk",
+        video: {
+          url: UNOFFICIAL_FARMA_VIDEO_URL,
+          thumbnail: "./assets/img/unofficial-farma.jpg",
         },
       },
       {
         title: "Availability Monitor",
         startDate: "Maio de 2026",
         endDate: "Jul. de 2026",
-        bullets: [
-          "Ferramenta de monitoramento de servidores dividida em duas aplicações: um motor " +
-            "de linha de comando que verifica a disponibilidade dos hosts e avisa por e-mail, " +
-            "e um painel web para montar os arquivos de configuração que ele consome.",
-          "O motor, Server Availability Monitor (SAM), é escrito em Python e separa DTOs, " +
-            "repositórios e serviços. Opera em loop, testando os servidores por conexão TCP " +
-            "em paralelo, comparando o resultado com o ciclo anterior e despachando e-mail " +
-            "por SMTP quando detecta queda, recuperação ou lembrete vencido de host ainda " +
-            "offline. Os logs têm rotação diária e a lógica pura é coberta por pytest.",
-          "O painel, Client Availability Monitor (CAM), é uma SPA em Angular 18 com " +
-            "TypeScript, sem backend, banco ou armazenamento local — o estado vive em " +
-            "memória, em stores RxJS organizados no padrão MVVM. Cada aba valida o que se " +
-            "digita, propaga a renomeação ou remoção de um servidor para a lista de ativos " +
-            "e exporta o arquivo pronto. Testes em Jasmine e publicação no GitHub Pages " +
-            "rodam via GitHub Actions a cada push na main.",
-          "As duas aplicações não conversam entre si, só pelos quatro arquivos de " +
-            "configuração: o painel escreve, o monitor relê do disco a cada ciclo, então " +
-            "incluir um servidor ou trocar um destinatário entra em vigor sem reiniciar a " +
-            "execução.",
-        ],
-        reference: {
-          label: "Acessar vídeo (YouTube)",
-          url: "https://youtu.be/ndPGfHC1G3Q",
+        video: {
+          url: AVAILABILITY_MONITOR_VIDEO_URL,
+          thumbnail: "./assets/img/availability-monitor.jpg",
         },
       },
       {
         title: "Implantação do pEATL (RPG browser-based)",
         startDate: "Out. de 2012",
         endDate: "Nov. de 2012",
-        bullets: [
-          "Aos 10 anos de idade, dei meus primeiros passos práticos em tecnologia " +
-            "implantando um servidor privado a partir de uma versão modificada do " +
-            "AdventureQuest Worlds — meu primeiro contato com código-fonte e a " +
-            "customização de aplicações.",
-          "Adaptei a base existente com a inclusão de novos itens e ajustes na interface " +
-            "principal, explorando na prática a manipulação de assets, a estrutura web e a " +
-            "organização de arquivos.",
-          "Executei o deploy localmente e viabilizei o acesso externo via VPN (LogMeIn " +
-            "Hamachi), o que me introduziu a noções de rede, distribuição e disponibilidade.",
-        ],
-        reference: {
-          label: "Acessar vídeo (YouTube)",
-          url: "https://youtu.be/htxKAjm1iLc",
+        video: {
+          url: PEATL_IMPLANTATION_VIDEO_URL,
+          thumbnail: "./assets/img/peatl-implantation.jpg",
         },
       },
     ],
@@ -263,72 +224,27 @@ const projectSection = {
         title: "Unofficial Farma",
         startDate: "Aug. 2026",
         endDate: "Sep. 2026",
-        bullets: [
-          "A set of services for managing a pharmaceutical catalog — laboratories, medicines, " +
-            "and the reviews customers write about them — exposed to an AI through the MCP " +
-            "protocol and reachable from a chat interface.",
-          "At its base are three FastAPI REST services, one per resource, each in its own " +
-            "container and all backed by the same PostgreSQL, with full CRUD, pagination, and " +
-            "partial search. In front of them sit three MCP servers, which translate a tool " +
-            "call into an HTTP request and publish read operations only, leaving the catalog " +
-            "queryable but not modifiable by the AI. The chat is LibreChat running Gemini, " +
-            "which discovers the MCP servers from its own configuration, and the whole stack " +
-            "comes up through Docker Compose.",
-          "The stack stays invisible to the user, who simply asks which medicines a laboratory " +
-            "makes or what people have been saying about one of them, while the LLM picks the " +
-            "tool that answers on its own.",
-        ],
-        reference: {
-          label: "Watch video (YouTube)",
-          url: "https://youtu.be/rV1cxHIGGnk",
+        video: {
+          url: UNOFFICIAL_FARMA_VIDEO_URL,
+          thumbnail: "./assets/img/unofficial-farma.jpg",
         },
       },
       {
         title: "Availability Monitor",
         startDate: "May 2026",
         endDate: "Jul. 2026",
-        bullets: [
-          "A server monitoring tool split into two applications: a command-line engine that " +
-            "checks host availability and sends alerts by e-mail, and a web panel for " +
-            "assembling the configuration files it consumes.",
-          "The engine, Server Availability Monitor (SAM), is written in Python and separates " +
-            "DTOs, repositories, and services. It runs in a loop, probing servers over " +
-            "parallel TCP connections, comparing each result with the previous cycle, and " +
-            "dispatching e-mail over SMTP when it detects an outage, a recovery, or an " +
-            "overdue reminder for a host still offline. Logs rotate daily and the pure logic " +
-            "is covered by pytest.",
-          "The panel, Client Availability Monitor (CAM), is a TypeScript SPA in Angular 18 " +
-            "with no backend, database, or local storage — state lives in memory, in RxJS " +
-            "stores organized under the MVVM pattern. Each tab validates what is typed, " +
-            "propagates the renaming or removal of a server to the active list, and exports " +
-            "the finished file. Jasmine tests and deployment to GitHub Pages run through " +
-            "GitHub Actions on every push to main.",
-          "The two applications never talk to each other, only through the four configuration " +
-            "files: the panel writes them, the monitor re-reads them from disk each cycle, so " +
-            "adding a server or changing a recipient takes effect without restarting the run.",
-        ],
-        reference: {
-          label: "Watch video (YouTube)",
-          url: "https://youtu.be/ndPGfHC1G3Q",
+        video: {
+          url: AVAILABILITY_MONITOR_VIDEO_URL,
+          thumbnail: "./assets/img/availability-monitor.jpg",
         },
       },
       {
         title: "pEATL deployment (browser-based RPG)",
         startDate: "Oct. 2012",
         endDate: "Nov. 2012",
-        bullets: [
-          "At the age of 10, took my first practical steps in technology by deploying a " +
-            "private server from a modified version of AdventureQuest Worlds — my first " +
-            "contact with source code and application customization.",
-          "Adapted the existing codebase by adding new items and adjusting the main " +
-            "interface, gaining hands-on experience with asset manipulation, web structure, " +
-            "and file organization.",
-          "Deployed it locally and enabled external access over a VPN (LogMeIn Hamachi), " +
-            "which introduced me to notions of networking, distribution, and availability.",
-        ],
-        reference: {
-          label: "Watch video (YouTube)",
-          url: "https://youtu.be/htxKAjm1iLc",
+        video: {
+          url: PEATL_IMPLANTATION_VIDEO_URL,
+          thumbnail: "./assets/img/peatl-implantation.jpg",
         },
       },
     ],
