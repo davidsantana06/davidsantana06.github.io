@@ -89,7 +89,7 @@
             <div
               class="is-flex is-align-items-center is-gap-3 cssanimation ca__fx-fadeInBottom ca__u-delay270"
             >
-              <template x-for="(platform, index) in platforms">
+              <template x-for="platform in platforms">
                 <a
                   class="icon-text platform-link"
                   :style="`--platform-color: ${platform.color};`"
@@ -200,7 +200,7 @@
       <div class="content has-text-centered">
         <figure class="image is-128x128 is-inline-block">
           <img
-            class="is-rounded has-shadow"
+            class="is-rounded"
             src="./assets/img/goku-about-to-teleport.webp"
             :alt="$t('footer.imageAlt')"
             loading="lazy"

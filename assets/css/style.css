@@ -10,7 +10,6 @@
 html {
   scroll-behavior: smooth;
   scroll-snap-type: y proximity;
-  overflow-y: scroll;
 }
 
 ul {
@@ -21,10 +20,6 @@ ul {
 .hero,
 .footer {
   scroll-snap-align: start;
-}
-
-.hero.is-fullheight {
-  min-height: 100vh !important;
 }
 
 .platform-link {
