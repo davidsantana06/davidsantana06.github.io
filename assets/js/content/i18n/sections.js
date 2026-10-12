@@ -251,10 +251,9 @@ const projectSection = {
   },
 };
 
-const sections = Object.fromEntries(
+export const sections = Object.fromEntries(
   Object.keys(experienceSection).map((locale) => [
     locale,
     [experienceSection[locale], educationSection[locale], projectSection[locale]],
   ]),
 );
-export default sections;

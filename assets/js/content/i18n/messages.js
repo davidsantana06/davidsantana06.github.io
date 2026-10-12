@@ -1,4 +1,4 @@
-const messages = {
+export const messages = {
   "pt-BR": {
     home: {
       summary:
@@ -43,4 +43,3 @@ const messages = {
     },
   },
 };
-export default messages;

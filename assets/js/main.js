@@ -1,7 +1,7 @@
-import locale from "./config/locale.js";
-import platforms from "./content/platforms.js";
-import messages from "./content/i18n/messages.js";
-import sections from "./content/i18n/sections.js";
+import { locale } from "./config/locale.js";
+import { platforms } from "./content/platforms.js";
+import { messages } from "./content/i18n/messages.js";
+import { sections } from "./content/i18n/sections.js";
 
 const CAREER_START_DATE = new Date(2022, 8, 1);
 

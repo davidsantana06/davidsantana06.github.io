@@ -18,4 +18,3 @@ export const platforms = [
     color: "#FF0000",
   },
 ];
-export default platforms;
