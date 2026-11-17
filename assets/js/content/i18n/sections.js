@@ -9,7 +9,7 @@ const experienceSection = {
     title: "Principais experiências",
     entries: [
       {
-        title: "Desenvolvedor full stack",
+        title: "Engenheiro de software",
         organization: "Instituto Tecgraf/PUC-Rio",
         startDate: "Set. de 2026",
         endDate: "Presente",

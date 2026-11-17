@@ -2,7 +2,7 @@ export const messages = {
   "pt-BR": {
     home: {
       summary:
-        "<b>Desenvolvedor full stack</b> e <b>bacharel em Sistemas de Informação</b>, com " +
+        "<b>Engenheiro de software</b> e <b>bacharel em Sistemas de Informação</b>, com " +
         "mais de <b>{yearsOfExperience} anos de atuação</b> em soluções web. Possuo forte " +
         "domínio de backend e bancos de dados (SQL e NoSQL), além de experiência em " +
         "frontend, automação, qualidade de software (QA) e cloud computing.",
